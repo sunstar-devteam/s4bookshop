@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml"
+		xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+		<edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+	</edmx:Reference>
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="S4BookshopService" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="Authors" EntityType="S4BookshopService.Authors"/>
+				<EntitySet Name="Books" EntityType="S4BookshopService.Books"/>
+				<EntitySet Name="Orders" EntityType="S4BookshopService.Orders"/>
+				<EntitySet Name="Suppliers" EntityType="S4BookshopService.Suppliers"/>
+				<FunctionImport Name="GetSupplier" EntitySet="Suppliers" ReturnType="S4BookshopService.Suppliers" m:HttpMethod="GET">
+					<Parameter Name="OrderID" Type="Edm.Guid" Mode="In" Nullable="true"/>
+				</FunctionImport>
+				<AssociationSet Name="Books_author" Association="S4BookshopService.Books_author">
+					<End Role="Books" EntitySet="Books"/>
+					<End Role="Authors" EntitySet="Authors"/>
+				</AssociationSet>
+				<AssociationSet Name="Orders_book" Association="S4BookshopService.Orders_book">
+					<End Role="Orders" EntitySet="Orders"/>
+					<End Role="Books" EntitySet="Books"/>
+				</AssociationSet>
+			</EntityContainer>
+			<EntityType Name="Authors">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="name" Type="Edm.String"/>
+				<NavigationProperty Name="books" Relationship="S4BookshopService.Books_author" FromRole="Authors" ToRole="Books"/>
+			</EntityType>
+			<EntityType Name="Books">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="title" Type="Edm.String"/>
+				<NavigationProperty Name="author" Relationship="S4BookshopService.Books_author" FromRole="Books" ToRole="Authors"/>
+				<Property Name="stock" Type="Edm.Int32"/>
+				<Property Name="author_ID" Type="Edm.Int32"/>
+			</EntityType>
+			<EntityType Name="Orders">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+				<NavigationProperty Name="book" Relationship="S4BookshopService.Orders_book" FromRole="Orders" ToRole="Books"/>
+				<Property Name="buyer" Type="Edm.String"/>
+				<Property Name="date" Type="Edm.DateTimeOffset"/>
+				<Property Name="amount" Type="Edm.Int32"/>
+				<Property Name="supplier" Type="Edm.Int32"/>
+				<Property Name="book_ID" Type="Edm.Int32"/>
+			</EntityType>
+			<EntityType Name="Suppliers">
+				<Key>
+					<PropertyRef Name="Supplier"/>
+				</Key>
+				<Property Name="Supplier" Type="Edm.String" MaxLength="10" Nullable="false"/>
+				<Property Name="AlternativePayeeAccountNumber" Type="Edm.String" MaxLength="10"/>
+				<Property Name="AuthorizationGroup" Type="Edm.String" MaxLength="4"/>
+				<Property Name="CreatedByUser" Type="Edm.String" MaxLength="12"/>
+				<Property Name="CreationDate" Type="Edm.DateTime" sap:display-format="Date"/>
+				<Property Name="Customer" Type="Edm.String" MaxLength="10"/>
+				<Property Name="PaymentIsBlockedForSupplier" Type="Edm.Boolean"/>
+				<Property Name="PostingIsBlocked" Type="Edm.Boolean"/>
+				<Property Name="PurchasingIsBlocked" Type="Edm.Boolean"/>
+				<Property Name="SupplierAccountGroup" Type="Edm.String" MaxLength="4"/>
+				<Property Name="SupplierFullName" Type="Edm.String" MaxLength="220"/>
+				<Property Name="SupplierName" Type="Edm.String" MaxLength="80"/>
+				<Property Name="VATRegistration" Type="Edm.String" MaxLength="20"/>
+				<Property Name="BirthDate" Type="Edm.DateTime" sap:display-format="Date"/>
+				<Property Name="ConcatenatedInternationalLocNo" Type="Edm.String" MaxLength="20"/>
+				<Property Name="DeletionIndicator" Type="Edm.Boolean"/>
+				<Property Name="FiscalAddress" Type="Edm.String" MaxLength="10"/>
+				<Property Name="Industry" Type="Edm.String" MaxLength="4"/>
+				<Property Name="InternationalLocationNumber1" Type="Edm.String" MaxLength="7"/>
+				<Property Name="InternationalLocationNumber2" Type="Edm.String" MaxLength="5"/>
+				<Property Name="InternationalLocationNumber3" Type="Edm.String" MaxLength="1"/>
+				<Property Name="IsNaturalPerson" Type="Edm.String" MaxLength="1"/>
+				<Property Name="ResponsibleType" Type="Edm.String" MaxLength="2"/>
+				<Property Name="SuplrQltyInProcmtCertfnValidTo" Type="Edm.DateTime" sap:display-format="Date"/>
+				<Property Name="SuplrQualityManagementSystem" Type="Edm.String" MaxLength="4"/>
+				<Property Name="SupplierCorporateGroup" Type="Edm.String" MaxLength="10"/>
+				<Property Name="SupplierProcurementBlock" Type="Edm.String" MaxLength="2"/>
+				<Property Name="TaxNumber1" Type="Edm.String" MaxLength="16"/>
+				<Property Name="TaxNumber2" Type="Edm.String" MaxLength="11"/>
+				<Property Name="TaxNumber3" Type="Edm.String" MaxLength="18"/>
+				<Property Name="TaxNumber4" Type="Edm.String" MaxLength="18"/>
+				<Property Name="TaxNumber5" Type="Edm.String" MaxLength="60"/>
+				<Property Name="TaxNumberResponsible" Type="Edm.String" MaxLength="18"/>
+				<Property Name="TaxNumberType" Type="Edm.String" MaxLength="2"/>
+			</EntityType>
+			<Association Name="Books_author">
+				<End Role="Books" Type="S4BookshopService.Books" Multiplicity="*"/>
+				<End Role="Authors" Type="S4BookshopService.Authors" Multiplicity="0..1"/>
+				<ReferentialConstraint>
+					<Principal Role="Authors">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="Books">
+						<PropertyRef Name="author_ID"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="Orders_book">
+				<End Role="Orders" Type="S4BookshopService.Orders" Multiplicity="*"/>
+				<End Role="Books" Type="S4BookshopService.Books" Multiplicity="0..1"/>
+				<ReferentialConstraint>
+					<Principal Role="Books">
+						<PropertyRef Name="ID"/>
+					</Principal>
+					<Dependent Role="Orders">
+						<PropertyRef Name="book_ID"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Annotations Target="S4BookshopService.EntityContainer/Authors" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Capabilities.DeleteRestrictions">
+					<Record Type="Capabilities.DeleteRestrictionsType">
+						<PropertyValue Property="Deletable" Bool="false"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="Capabilities.InsertRestrictions">
+					<Record Type="Capabilities.InsertRestrictionsType">
+						<PropertyValue Property="Insertable" Bool="false"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="Capabilities.UpdateRestrictions">
+					<Record Type="Capabilities.UpdateRestrictionsType">
+						<PropertyValue Property="Updatable" Bool="false"/>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="S4BookshopService.EntityContainer/Orders" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Capabilities.DeleteRestrictions">
+					<Record Type="Capabilities.DeleteRestrictionsType">
+						<PropertyValue Property="Deletable" Bool="false"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="Capabilities.ReadRestrictions">
+					<Record Type="Capabilities.ReadRestrictionsType">
+						<PropertyValue Property="Readable" Bool="false"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="Capabilities.UpdateRestrictions">
+					<Record Type="Capabilities.UpdateRestrictionsType">
+						<PropertyValue Property="Updatable" Bool="false"/>
+					</Record>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

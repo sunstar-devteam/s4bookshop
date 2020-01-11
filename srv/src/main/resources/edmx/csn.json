@@ -1,0 +1,4814 @@
+{
+  "namespace": "my.s4bookshop",
+  "definitions": {
+    "API_BUSINESS_PARTNER.A_AddressEmailAddressType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_ADDRESSEMAILADDRESSTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "AddressID": {
+          "@cds.persistence.name": "ADDRESSID",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "Person": {
+          "@cds.persistence.name": "PERSON",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "OrdinalNumber": {
+          "@cds.persistence.name": "ORDINALNUMBER",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "IsDefaultEmailAddress": {
+          "@cds.persistence.name": "ISDEFAULTEMAILADDRESS",
+          "type": "cds.Boolean"
+        },
+        "EmailAddress": {
+          "@cds.persistence.name": "EMAILADDRESS",
+          "type": "cds.String",
+          "length": 241
+        },
+        "SearchEmailAddress": {
+          "@cds.persistence.name": "SEARCHEMAILADDRESS",
+          "type": "cds.String",
+          "length": 20
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_AddressFaxNumberType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_ADDRESSFAXNUMBERTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "AddressID": {
+          "@cds.persistence.name": "ADDRESSID",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "Person": {
+          "@cds.persistence.name": "PERSON",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "OrdinalNumber": {
+          "@cds.persistence.name": "ORDINALNUMBER",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "IsDefaultFaxNumber": {
+          "@cds.persistence.name": "ISDEFAULTFAXNUMBER",
+          "type": "cds.Boolean"
+        },
+        "FaxCountry": {
+          "@cds.persistence.name": "FAXCOUNTRY",
+          "type": "cds.String",
+          "length": 3
+        },
+        "FaxNumber": {
+          "@cds.persistence.name": "FAXNUMBER",
+          "type": "cds.String",
+          "length": 30
+        },
+        "FaxNumberExtension": {
+          "@cds.persistence.name": "FAXNUMBEREXTENSION",
+          "type": "cds.String",
+          "length": 10
+        },
+        "InternationalFaxNumber": {
+          "@cds.persistence.name": "INTERNATIONALFAXNUMBER",
+          "type": "cds.String",
+          "length": 30
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_AddressHomePageURLType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_ADDRESSHOMEPAGEURLTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "AddressID": {
+          "@cds.persistence.name": "ADDRESSID",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "Person": {
+          "@cds.persistence.name": "PERSON",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "OrdinalNumber": {
+          "@cds.persistence.name": "ORDINALNUMBER",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "ValidityStartDate": {
+          "@cds.persistence.name": "VALIDITYSTARTDATE",
+          "key": true,
+          "type": "cds.Date"
+        },
+        "IsDefaultURLAddress": {
+          "@cds.persistence.name": "ISDEFAULTURLADDRESS",
+          "key": true,
+          "type": "cds.Boolean"
+        },
+        "SearchURLAddress": {
+          "@cds.persistence.name": "SEARCHURLADDRESS",
+          "type": "cds.String",
+          "length": 50
+        },
+        "URLFieldLength": {
+          "@cds.persistence.name": "URLFIELDLENGTH",
+          "type": "cds.Integer"
+        },
+        "WebsiteURL": {
+          "@cds.persistence.name": "WEBSITEURL",
+          "type": "cds.String",
+          "length": 2048
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_AddressPhoneNumberType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_ADDRESSPHONENUMBERTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "AddressID": {
+          "@cds.persistence.name": "ADDRESSID",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "Person": {
+          "@cds.persistence.name": "PERSON",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "OrdinalNumber": {
+          "@cds.persistence.name": "ORDINALNUMBER",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "DestinationLocationCountry": {
+          "@cds.persistence.name": "DESTINATIONLOCATIONCOUNTRY",
+          "type": "cds.String",
+          "length": 3
+        },
+        "IsDefaultPhoneNumber": {
+          "@cds.persistence.name": "ISDEFAULTPHONENUMBER",
+          "type": "cds.Boolean"
+        },
+        "PhoneNumber": {
+          "@cds.persistence.name": "PHONENUMBER",
+          "type": "cds.String",
+          "length": 30
+        },
+        "PhoneNumberExtension": {
+          "@cds.persistence.name": "PHONENUMBEREXTENSION",
+          "type": "cds.String",
+          "length": 10
+        },
+        "InternationalPhoneNumber": {
+          "@cds.persistence.name": "INTERNATIONALPHONENUMBER",
+          "type": "cds.String",
+          "length": 30
+        },
+        "PhoneNumberType": {
+          "@cds.persistence.name": "PHONENUMBERTYPE",
+          "type": "cds.String",
+          "length": 1
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BPContactToAddressType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_BPCONTACTTOADDRESSTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "RelationshipNumber": {
+          "@cds.persistence.name": "RELATIONSHIPNUMBER",
+          "key": true,
+          "type": "cds.String",
+          "length": 12
+        },
+        "BusinessPartnerCompany": {
+          "@cds.persistence.name": "BUSINESSPARTNERCOMPANY",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "BusinessPartnerPerson": {
+          "@cds.persistence.name": "BUSINESSPARTNERPERSON",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "ValidityEndDate": {
+          "@cds.persistence.name": "VALIDITYENDDATE",
+          "key": true,
+          "type": "cds.Date"
+        },
+        "AddressID": {
+          "@cds.persistence.name": "ADDRESSID",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "AddressNumber": {
+          "@cds.persistence.name": "ADDRESSNUMBER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "AdditionalStreetPrefixName": {
+          "@cds.persistence.name": "ADDITIONALSTREETPREFIXNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "AdditionalStreetSuffixName": {
+          "@cds.persistence.name": "ADDITIONALSTREETSUFFIXNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "AddressTimeZone": {
+          "@cds.persistence.name": "ADDRESSTIMEZONE",
+          "type": "cds.String",
+          "length": 6
+        },
+        "CareOfName": {
+          "@cds.persistence.name": "CAREOFNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "CityCode": {
+          "@cds.persistence.name": "CITYCODE",
+          "type": "cds.String",
+          "length": 12
+        },
+        "CityName": {
+          "@cds.persistence.name": "CITYNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "CompanyPostalCode": {
+          "@cds.persistence.name": "COMPANYPOSTALCODE",
+          "type": "cds.String",
+          "length": 10
+        },
+        "Country": {
+          "@cds.persistence.name": "COUNTRY",
+          "type": "cds.String",
+          "length": 3
+        },
+        "County": {
+          "@cds.persistence.name": "COUNTY",
+          "type": "cds.String",
+          "length": 40
+        },
+        "DeliveryServiceNumber": {
+          "@cds.persistence.name": "DELIVERYSERVICENUMBER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "DeliveryServiceTypeCode": {
+          "@cds.persistence.name": "DELIVERYSERVICETYPECODE",
+          "type": "cds.String",
+          "length": 4
+        },
+        "District": {
+          "@cds.persistence.name": "DISTRICT",
+          "type": "cds.String",
+          "length": 40
+        },
+        "FormOfAddress": {
+          "@cds.persistence.name": "FORMOFADDRESS",
+          "type": "cds.String",
+          "length": 4
+        },
+        "FullName": {
+          "@cds.persistence.name": "FULLNAME",
+          "type": "cds.String",
+          "length": 80
+        },
+        "HomeCityName": {
+          "@cds.persistence.name": "HOMECITYNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "HouseNumber": {
+          "@cds.persistence.name": "HOUSENUMBER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "HouseNumberSupplementText": {
+          "@cds.persistence.name": "HOUSENUMBERSUPPLEMENTTEXT",
+          "type": "cds.String",
+          "length": 10
+        },
+        "Language": {
+          "@cds.persistence.name": "LANGUAGE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "POBox": {
+          "@cds.persistence.name": "POBOX",
+          "type": "cds.String",
+          "length": 10
+        },
+        "POBoxDeviatingCityName": {
+          "@cds.persistence.name": "POBOXDEVIATINGCITYNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "POBoxDeviatingCountry": {
+          "@cds.persistence.name": "POBOXDEVIATINGCOUNTRY",
+          "type": "cds.String",
+          "length": 3
+        },
+        "POBoxDeviatingRegion": {
+          "@cds.persistence.name": "POBOXDEVIATINGREGION",
+          "type": "cds.String",
+          "length": 3
+        },
+        "POBoxIsWithoutNumber": {
+          "@cds.persistence.name": "POBOXISWITHOUTNUMBER",
+          "type": "cds.Boolean"
+        },
+        "POBoxLobbyName": {
+          "@cds.persistence.name": "POBOXLOBBYNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "POBoxPostalCode": {
+          "@cds.persistence.name": "POBOXPOSTALCODE",
+          "type": "cds.String",
+          "length": 10
+        },
+        "Person": {
+          "@cds.persistence.name": "PERSON",
+          "type": "cds.String",
+          "length": 10
+        },
+        "PostalCode": {
+          "@cds.persistence.name": "POSTALCODE",
+          "type": "cds.String",
+          "length": 10
+        },
+        "PrfrdCommMediumType": {
+          "@cds.persistence.name": "PRFRDCOMMMEDIUMTYPE",
+          "type": "cds.String",
+          "length": 3
+        },
+        "Region": {
+          "@cds.persistence.name": "REGION",
+          "type": "cds.String",
+          "length": 3
+        },
+        "StreetName": {
+          "@cds.persistence.name": "STREETNAME",
+          "type": "cds.String",
+          "length": 60
+        },
+        "StreetPrefixName": {
+          "@cds.persistence.name": "STREETPREFIXNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "StreetSuffixName": {
+          "@cds.persistence.name": "STREETSUFFIXNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "TaxJurisdiction": {
+          "@cds.persistence.name": "TAXJURISDICTION",
+          "type": "cds.String",
+          "length": 15
+        },
+        "TransportZone": {
+          "@cds.persistence.name": "TRANSPORTZONE",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_EmailAddress": {
+          "@cds.persistence.name": "TO_EMAILADDRESS",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_AddressEmailAddressType",
+          "keys": [
+            {
+              "ref": [
+                "AddressID"
+              ],
+              "$generatedFieldName": "to_EmailAddress_AddressID"
+            },
+            {
+              "ref": [
+                "Person"
+              ],
+              "$generatedFieldName": "to_EmailAddress_Person"
+            },
+            {
+              "ref": [
+                "OrdinalNumber"
+              ],
+              "$generatedFieldName": "to_EmailAddress_OrdinalNumber"
+            }
+          ]
+        },
+        "to_FaxNumber": {
+          "@cds.persistence.name": "TO_FAXNUMBER",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_AddressFaxNumberType",
+          "keys": [
+            {
+              "ref": [
+                "AddressID"
+              ],
+              "$generatedFieldName": "to_FaxNumber_AddressID"
+            },
+            {
+              "ref": [
+                "Person"
+              ],
+              "$generatedFieldName": "to_FaxNumber_Person"
+            },
+            {
+              "ref": [
+                "OrdinalNumber"
+              ],
+              "$generatedFieldName": "to_FaxNumber_OrdinalNumber"
+            }
+          ]
+        },
+        "to_MobilePhoneNumber": {
+          "@cds.persistence.name": "TO_MOBILEPHONENUMBER",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_AddressPhoneNumberType",
+          "keys": [
+            {
+              "ref": [
+                "AddressID"
+              ],
+              "$generatedFieldName": "to_MobilePhoneNumber_AddressID"
+            },
+            {
+              "ref": [
+                "Person"
+              ],
+              "$generatedFieldName": "to_MobilePhoneNumber_Person"
+            },
+            {
+              "ref": [
+                "OrdinalNumber"
+              ],
+              "$generatedFieldName": "to_MobilePhoneNumber_OrdinalNumber"
+            }
+          ]
+        },
+        "to_PhoneNumber": {
+          "@cds.persistence.name": "TO_PHONENUMBER",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_AddressPhoneNumberType",
+          "keys": [
+            {
+              "ref": [
+                "AddressID"
+              ],
+              "$generatedFieldName": "to_PhoneNumber_AddressID"
+            },
+            {
+              "ref": [
+                "Person"
+              ],
+              "$generatedFieldName": "to_PhoneNumber_Person"
+            },
+            {
+              "ref": [
+                "OrdinalNumber"
+              ],
+              "$generatedFieldName": "to_PhoneNumber_OrdinalNumber"
+            }
+          ]
+        },
+        "to_URLAddress": {
+          "@cds.persistence.name": "TO_URLADDRESS",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_AddressHomePageURLType",
+          "keys": [
+            {
+              "ref": [
+                "AddressID"
+              ],
+              "$generatedFieldName": "to_URLAddress_AddressID"
+            },
+            {
+              "ref": [
+                "Person"
+              ],
+              "$generatedFieldName": "to_URLAddress_Person"
+            },
+            {
+              "ref": [
+                "OrdinalNumber"
+              ],
+              "$generatedFieldName": "to_URLAddress_OrdinalNumber"
+            },
+            {
+              "ref": [
+                "ValidityStartDate"
+              ],
+              "$generatedFieldName": "to_URLAddress_ValidityStartDate"
+            },
+            {
+              "ref": [
+                "IsDefaultURLAddress"
+              ],
+              "$generatedFieldName": "to_URLAddress_IsDefaultURLAddress"
+            }
+          ]
+        },
+        "to_EmailAddress_AddressID": {
+          "@cds.persistence.name": "TO_EMAILADDRESS_ADDRESSID",
+          "@odata.foreignKey4": "to_EmailAddress",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_EmailAddress_Person": {
+          "@cds.persistence.name": "TO_EMAILADDRESS_PERSON",
+          "@odata.foreignKey4": "to_EmailAddress",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_EmailAddress_OrdinalNumber": {
+          "@cds.persistence.name": "TO_EMAILADDRESS_ORDINALNUMBER",
+          "@odata.foreignKey4": "to_EmailAddress",
+          "type": "cds.String",
+          "length": 3
+        },
+        "to_FaxNumber_AddressID": {
+          "@cds.persistence.name": "TO_FAXNUMBER_ADDRESSID",
+          "@odata.foreignKey4": "to_FaxNumber",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_FaxNumber_Person": {
+          "@cds.persistence.name": "TO_FAXNUMBER_PERSON",
+          "@odata.foreignKey4": "to_FaxNumber",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_FaxNumber_OrdinalNumber": {
+          "@cds.persistence.name": "TO_FAXNUMBER_ORDINALNUMBER",
+          "@odata.foreignKey4": "to_FaxNumber",
+          "type": "cds.String",
+          "length": 3
+        },
+        "to_MobilePhoneNumber_AddressID": {
+          "@cds.persistence.name": "TO_MOBILEPHONENUMBER_ADDRESSID",
+          "@odata.foreignKey4": "to_MobilePhoneNumber",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_MobilePhoneNumber_Person": {
+          "@cds.persistence.name": "TO_MOBILEPHONENUMBER_PERSON",
+          "@odata.foreignKey4": "to_MobilePhoneNumber",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_MobilePhoneNumber_OrdinalNumber": {
+          "@cds.persistence.name": "TO_MOBILEPHONENUMBER_ORDINALNUMBER",
+          "@odata.foreignKey4": "to_MobilePhoneNumber",
+          "type": "cds.String",
+          "length": 3
+        },
+        "to_PhoneNumber_AddressID": {
+          "@cds.persistence.name": "TO_PHONENUMBER_ADDRESSID",
+          "@odata.foreignKey4": "to_PhoneNumber",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_PhoneNumber_Person": {
+          "@cds.persistence.name": "TO_PHONENUMBER_PERSON",
+          "@odata.foreignKey4": "to_PhoneNumber",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_PhoneNumber_OrdinalNumber": {
+          "@cds.persistence.name": "TO_PHONENUMBER_ORDINALNUMBER",
+          "@odata.foreignKey4": "to_PhoneNumber",
+          "type": "cds.String",
+          "length": 3
+        },
+        "to_URLAddress_AddressID": {
+          "@cds.persistence.name": "TO_URLADDRESS_ADDRESSID",
+          "@odata.foreignKey4": "to_URLAddress",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_URLAddress_Person": {
+          "@cds.persistence.name": "TO_URLADDRESS_PERSON",
+          "@odata.foreignKey4": "to_URLAddress",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_URLAddress_OrdinalNumber": {
+          "@cds.persistence.name": "TO_URLADDRESS_ORDINALNUMBER",
+          "@odata.foreignKey4": "to_URLAddress",
+          "type": "cds.String",
+          "length": 3
+        },
+        "to_URLAddress_ValidityStartDate": {
+          "@cds.persistence.name": "TO_URLADDRESS_VALIDITYSTARTDATE",
+          "@odata.foreignKey4": "to_URLAddress",
+          "type": "cds.Date"
+        },
+        "to_URLAddress_IsDefaultURLAddress": {
+          "@cds.persistence.name": "TO_URLADDRESS_ISDEFAULTURLADDRESS",
+          "@odata.foreignKey4": "to_URLAddress",
+          "type": "cds.Boolean"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BPContactToFuncAndDeptType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_BPCONTACTTOFUNCANDDEPTTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "RelationshipNumber": {
+          "@cds.persistence.name": "RELATIONSHIPNUMBER",
+          "key": true,
+          "type": "cds.String",
+          "length": 12
+        },
+        "BusinessPartnerCompany": {
+          "@cds.persistence.name": "BUSINESSPARTNERCOMPANY",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "BusinessPartnerPerson": {
+          "@cds.persistence.name": "BUSINESSPARTNERPERSON",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "ValidityEndDate": {
+          "@cds.persistence.name": "VALIDITYENDDATE",
+          "key": true,
+          "type": "cds.Date"
+        },
+        "ContactPersonFunction": {
+          "@cds.persistence.name": "CONTACTPERSONFUNCTION",
+          "type": "cds.String",
+          "length": 4
+        },
+        "ContactPersonDepartment": {
+          "@cds.persistence.name": "CONTACTPERSONDEPARTMENT",
+          "type": "cds.String",
+          "length": 4
+        },
+        "PhoneNumber": {
+          "@cds.persistence.name": "PHONENUMBER",
+          "type": "cds.String",
+          "length": 30
+        },
+        "PhoneNumberExtension": {
+          "@cds.persistence.name": "PHONENUMBEREXTENSION",
+          "type": "cds.String",
+          "length": 10
+        },
+        "FaxNumber": {
+          "@cds.persistence.name": "FAXNUMBER",
+          "type": "cds.String",
+          "length": 30
+        },
+        "FaxNumberExtension": {
+          "@cds.persistence.name": "FAXNUMBEREXTENSION",
+          "type": "cds.String",
+          "length": 10
+        },
+        "EmailAddress": {
+          "@cds.persistence.name": "EMAILADDRESS",
+          "type": "cds.String",
+          "length": 241
+        },
+        "RelationshipCategory": {
+          "@cds.persistence.name": "RELATIONSHIPCATEGORY",
+          "type": "cds.String",
+          "length": 6
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BuPaAddressUsageType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_BUPAADDRESSUSAGETYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "BusinessPartner": {
+          "@cds.persistence.name": "BUSINESSPARTNER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "ValidityEndDate": {
+          "@cds.persistence.name": "VALIDITYENDDATE",
+          "key": true,
+          "type": "cds.Timestamp"
+        },
+        "AddressUsage": {
+          "@cds.persistence.name": "ADDRESSUSAGE",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "AddressID": {
+          "@cds.persistence.name": "ADDRESSID",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "ValidityStartDate": {
+          "@cds.persistence.name": "VALIDITYSTARTDATE",
+          "type": "cds.Timestamp"
+        },
+        "StandardUsage": {
+          "@cds.persistence.name": "STANDARDUSAGE",
+          "type": "cds.Boolean"
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BuPaIdentificationType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_BUPAIDENTIFICATIONTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "BusinessPartner": {
+          "@cds.persistence.name": "BUSINESSPARTNER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "BPIdentificationType": {
+          "@cds.persistence.name": "BPIDENTIFICATIONTYPE",
+          "key": true,
+          "type": "cds.String",
+          "length": 6
+        },
+        "BPIdentificationNumber": {
+          "@cds.persistence.name": "BPIDENTIFICATIONNUMBER",
+          "key": true,
+          "type": "cds.String",
+          "length": 60
+        },
+        "BPIdnNmbrIssuingInstitute": {
+          "@cds.persistence.name": "BPIDNNMBRISSUINGINSTITUTE",
+          "type": "cds.String",
+          "length": 40
+        },
+        "BPIdentificationEntryDate": {
+          "@cds.persistence.name": "BPIDENTIFICATIONENTRYDATE",
+          "type": "cds.Date"
+        },
+        "Country": {
+          "@cds.persistence.name": "COUNTRY",
+          "type": "cds.String",
+          "length": 3
+        },
+        "Region": {
+          "@cds.persistence.name": "REGION",
+          "type": "cds.String",
+          "length": 3
+        },
+        "ValidityStartDate": {
+          "@cds.persistence.name": "VALIDITYSTARTDATE",
+          "type": "cds.Date"
+        },
+        "ValidityEndDate": {
+          "@cds.persistence.name": "VALIDITYENDDATE",
+          "type": "cds.Date"
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BuPaIndustryType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_BUPAINDUSTRYTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "IndustrySector": {
+          "@cds.persistence.name": "INDUSTRYSECTOR",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "IndustrySystemType": {
+          "@cds.persistence.name": "INDUSTRYSYSTEMTYPE",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "BusinessPartner": {
+          "@cds.persistence.name": "BUSINESSPARTNER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "IsStandardIndustry": {
+          "@cds.persistence.name": "ISSTANDARDINDUSTRY",
+          "type": "cds.String",
+          "length": 1
+        },
+        "IndustryKeyDescription": {
+          "@cds.persistence.name": "INDUSTRYKEYDESCRIPTION",
+          "type": "cds.String",
+          "length": 100
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BusinessPartnerAddressType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_BUSINESSPARTNERADDRESSTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "BusinessPartner": {
+          "@cds.persistence.name": "BUSINESSPARTNER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "AddressID": {
+          "@cds.persistence.name": "ADDRESSID",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "ValidityStartDate": {
+          "@cds.persistence.name": "VALIDITYSTARTDATE",
+          "type": "cds.Timestamp"
+        },
+        "ValidityEndDate": {
+          "@cds.persistence.name": "VALIDITYENDDATE",
+          "type": "cds.Timestamp"
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "AddressUUID": {
+          "@cds.persistence.name": "ADDRESSUUID",
+          "type": "cds.UUID"
+        },
+        "AdditionalStreetPrefixName": {
+          "@cds.persistence.name": "ADDITIONALSTREETPREFIXNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "AdditionalStreetSuffixName": {
+          "@cds.persistence.name": "ADDITIONALSTREETSUFFIXNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "AddressTimeZone": {
+          "@cds.persistence.name": "ADDRESSTIMEZONE",
+          "type": "cds.String",
+          "length": 6
+        },
+        "CareOfName": {
+          "@cds.persistence.name": "CAREOFNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "CityCode": {
+          "@cds.persistence.name": "CITYCODE",
+          "type": "cds.String",
+          "length": 12
+        },
+        "CityName": {
+          "@cds.persistence.name": "CITYNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "CompanyPostalCode": {
+          "@cds.persistence.name": "COMPANYPOSTALCODE",
+          "type": "cds.String",
+          "length": 10
+        },
+        "Country": {
+          "@cds.persistence.name": "COUNTRY",
+          "type": "cds.String",
+          "length": 3
+        },
+        "County": {
+          "@cds.persistence.name": "COUNTY",
+          "type": "cds.String",
+          "length": 40
+        },
+        "DeliveryServiceNumber": {
+          "@cds.persistence.name": "DELIVERYSERVICENUMBER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "DeliveryServiceTypeCode": {
+          "@cds.persistence.name": "DELIVERYSERVICETYPECODE",
+          "type": "cds.String",
+          "length": 4
+        },
+        "District": {
+          "@cds.persistence.name": "DISTRICT",
+          "type": "cds.String",
+          "length": 40
+        },
+        "FormOfAddress": {
+          "@cds.persistence.name": "FORMOFADDRESS",
+          "type": "cds.String",
+          "length": 4
+        },
+        "FullName": {
+          "@cds.persistence.name": "FULLNAME",
+          "type": "cds.String",
+          "length": 80
+        },
+        "HomeCityName": {
+          "@cds.persistence.name": "HOMECITYNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "HouseNumber": {
+          "@cds.persistence.name": "HOUSENUMBER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "HouseNumberSupplementText": {
+          "@cds.persistence.name": "HOUSENUMBERSUPPLEMENTTEXT",
+          "type": "cds.String",
+          "length": 10
+        },
+        "Language": {
+          "@cds.persistence.name": "LANGUAGE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "POBox": {
+          "@cds.persistence.name": "POBOX",
+          "type": "cds.String",
+          "length": 10
+        },
+        "POBoxDeviatingCityName": {
+          "@cds.persistence.name": "POBOXDEVIATINGCITYNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "POBoxDeviatingCountry": {
+          "@cds.persistence.name": "POBOXDEVIATINGCOUNTRY",
+          "type": "cds.String",
+          "length": 3
+        },
+        "POBoxDeviatingRegion": {
+          "@cds.persistence.name": "POBOXDEVIATINGREGION",
+          "type": "cds.String",
+          "length": 3
+        },
+        "POBoxIsWithoutNumber": {
+          "@cds.persistence.name": "POBOXISWITHOUTNUMBER",
+          "type": "cds.Boolean"
+        },
+        "POBoxLobbyName": {
+          "@cds.persistence.name": "POBOXLOBBYNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "POBoxPostalCode": {
+          "@cds.persistence.name": "POBOXPOSTALCODE",
+          "type": "cds.String",
+          "length": 10
+        },
+        "Person": {
+          "@cds.persistence.name": "PERSON",
+          "type": "cds.String",
+          "length": 10
+        },
+        "PostalCode": {
+          "@cds.persistence.name": "POSTALCODE",
+          "type": "cds.String",
+          "length": 10
+        },
+        "PrfrdCommMediumType": {
+          "@cds.persistence.name": "PRFRDCOMMMEDIUMTYPE",
+          "type": "cds.String",
+          "length": 3
+        },
+        "Region": {
+          "@cds.persistence.name": "REGION",
+          "type": "cds.String",
+          "length": 3
+        },
+        "StreetName": {
+          "@cds.persistence.name": "STREETNAME",
+          "type": "cds.String",
+          "length": 60
+        },
+        "StreetPrefixName": {
+          "@cds.persistence.name": "STREETPREFIXNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "StreetSuffixName": {
+          "@cds.persistence.name": "STREETSUFFIXNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "TaxJurisdiction": {
+          "@cds.persistence.name": "TAXJURISDICTION",
+          "type": "cds.String",
+          "length": 15
+        },
+        "TransportZone": {
+          "@cds.persistence.name": "TRANSPORTZONE",
+          "type": "cds.String",
+          "length": 10
+        },
+        "AddressIDByExternalSystem": {
+          "@cds.persistence.name": "ADDRESSIDBYEXTERNALSYSTEM",
+          "type": "cds.String",
+          "length": 20
+        },
+        "to_AddressUsage": {
+          "@cds.persistence.name": "TO_ADDRESSUSAGE",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_BuPaAddressUsageType",
+          "keys": [
+            {
+              "ref": [
+                "BusinessPartner"
+              ],
+              "$generatedFieldName": "to_AddressUsage_BusinessPartner"
+            },
+            {
+              "ref": [
+                "ValidityEndDate"
+              ],
+              "$generatedFieldName": "to_AddressUsage_ValidityEndDate"
+            },
+            {
+              "ref": [
+                "AddressUsage"
+              ],
+              "$generatedFieldName": "to_AddressUsage_AddressUsage"
+            },
+            {
+              "ref": [
+                "AddressID"
+              ],
+              "$generatedFieldName": "to_AddressUsage_AddressID"
+            }
+          ]
+        },
+        "to_EmailAddress": {
+          "@cds.persistence.name": "TO_EMAILADDRESS",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_AddressEmailAddressType",
+          "keys": [
+            {
+              "ref": [
+                "AddressID"
+              ],
+              "$generatedFieldName": "to_EmailAddress_AddressID"
+            },
+            {
+              "ref": [
+                "Person"
+              ],
+              "$generatedFieldName": "to_EmailAddress_Person"
+            },
+            {
+              "ref": [
+                "OrdinalNumber"
+              ],
+              "$generatedFieldName": "to_EmailAddress_OrdinalNumber"
+            }
+          ]
+        },
+        "to_FaxNumber": {
+          "@cds.persistence.name": "TO_FAXNUMBER",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_AddressFaxNumberType",
+          "keys": [
+            {
+              "ref": [
+                "AddressID"
+              ],
+              "$generatedFieldName": "to_FaxNumber_AddressID"
+            },
+            {
+              "ref": [
+                "Person"
+              ],
+              "$generatedFieldName": "to_FaxNumber_Person"
+            },
+            {
+              "ref": [
+                "OrdinalNumber"
+              ],
+              "$generatedFieldName": "to_FaxNumber_OrdinalNumber"
+            }
+          ]
+        },
+        "to_MobilePhoneNumber": {
+          "@cds.persistence.name": "TO_MOBILEPHONENUMBER",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_AddressPhoneNumberType",
+          "keys": [
+            {
+              "ref": [
+                "AddressID"
+              ],
+              "$generatedFieldName": "to_MobilePhoneNumber_AddressID"
+            },
+            {
+              "ref": [
+                "Person"
+              ],
+              "$generatedFieldName": "to_MobilePhoneNumber_Person"
+            },
+            {
+              "ref": [
+                "OrdinalNumber"
+              ],
+              "$generatedFieldName": "to_MobilePhoneNumber_OrdinalNumber"
+            }
+          ]
+        },
+        "to_PhoneNumber": {
+          "@cds.persistence.name": "TO_PHONENUMBER",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_AddressPhoneNumberType",
+          "keys": [
+            {
+              "ref": [
+                "AddressID"
+              ],
+              "$generatedFieldName": "to_PhoneNumber_AddressID"
+            },
+            {
+              "ref": [
+                "Person"
+              ],
+              "$generatedFieldName": "to_PhoneNumber_Person"
+            },
+            {
+              "ref": [
+                "OrdinalNumber"
+              ],
+              "$generatedFieldName": "to_PhoneNumber_OrdinalNumber"
+            }
+          ]
+        },
+        "to_URLAddress": {
+          "@cds.persistence.name": "TO_URLADDRESS",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_AddressHomePageURLType",
+          "keys": [
+            {
+              "ref": [
+                "AddressID"
+              ],
+              "$generatedFieldName": "to_URLAddress_AddressID"
+            },
+            {
+              "ref": [
+                "Person"
+              ],
+              "$generatedFieldName": "to_URLAddress_Person"
+            },
+            {
+              "ref": [
+                "OrdinalNumber"
+              ],
+              "$generatedFieldName": "to_URLAddress_OrdinalNumber"
+            },
+            {
+              "ref": [
+                "ValidityStartDate"
+              ],
+              "$generatedFieldName": "to_URLAddress_ValidityStartDate"
+            },
+            {
+              "ref": [
+                "IsDefaultURLAddress"
+              ],
+              "$generatedFieldName": "to_URLAddress_IsDefaultURLAddress"
+            }
+          ]
+        },
+        "to_AddressUsage_BusinessPartner": {
+          "@cds.persistence.name": "TO_ADDRESSUSAGE_BUSINESSPARTNER",
+          "@odata.foreignKey4": "to_AddressUsage",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_AddressUsage_ValidityEndDate": {
+          "@cds.persistence.name": "TO_ADDRESSUSAGE_VALIDITYENDDATE",
+          "@odata.foreignKey4": "to_AddressUsage",
+          "type": "cds.Timestamp"
+        },
+        "to_AddressUsage_AddressUsage": {
+          "@cds.persistence.name": "TO_ADDRESSUSAGE_ADDRESSUSAGE",
+          "@odata.foreignKey4": "to_AddressUsage",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_AddressUsage_AddressID": {
+          "@cds.persistence.name": "TO_ADDRESSUSAGE_ADDRESSID",
+          "@odata.foreignKey4": "to_AddressUsage",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_EmailAddress_AddressID": {
+          "@cds.persistence.name": "TO_EMAILADDRESS_ADDRESSID",
+          "@odata.foreignKey4": "to_EmailAddress",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_EmailAddress_Person": {
+          "@cds.persistence.name": "TO_EMAILADDRESS_PERSON",
+          "@odata.foreignKey4": "to_EmailAddress",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_EmailAddress_OrdinalNumber": {
+          "@cds.persistence.name": "TO_EMAILADDRESS_ORDINALNUMBER",
+          "@odata.foreignKey4": "to_EmailAddress",
+          "type": "cds.String",
+          "length": 3
+        },
+        "to_FaxNumber_AddressID": {
+          "@cds.persistence.name": "TO_FAXNUMBER_ADDRESSID",
+          "@odata.foreignKey4": "to_FaxNumber",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_FaxNumber_Person": {
+          "@cds.persistence.name": "TO_FAXNUMBER_PERSON",
+          "@odata.foreignKey4": "to_FaxNumber",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_FaxNumber_OrdinalNumber": {
+          "@cds.persistence.name": "TO_FAXNUMBER_ORDINALNUMBER",
+          "@odata.foreignKey4": "to_FaxNumber",
+          "type": "cds.String",
+          "length": 3
+        },
+        "to_MobilePhoneNumber_AddressID": {
+          "@cds.persistence.name": "TO_MOBILEPHONENUMBER_ADDRESSID",
+          "@odata.foreignKey4": "to_MobilePhoneNumber",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_MobilePhoneNumber_Person": {
+          "@cds.persistence.name": "TO_MOBILEPHONENUMBER_PERSON",
+          "@odata.foreignKey4": "to_MobilePhoneNumber",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_MobilePhoneNumber_OrdinalNumber": {
+          "@cds.persistence.name": "TO_MOBILEPHONENUMBER_ORDINALNUMBER",
+          "@odata.foreignKey4": "to_MobilePhoneNumber",
+          "type": "cds.String",
+          "length": 3
+        },
+        "to_PhoneNumber_AddressID": {
+          "@cds.persistence.name": "TO_PHONENUMBER_ADDRESSID",
+          "@odata.foreignKey4": "to_PhoneNumber",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_PhoneNumber_Person": {
+          "@cds.persistence.name": "TO_PHONENUMBER_PERSON",
+          "@odata.foreignKey4": "to_PhoneNumber",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_PhoneNumber_OrdinalNumber": {
+          "@cds.persistence.name": "TO_PHONENUMBER_ORDINALNUMBER",
+          "@odata.foreignKey4": "to_PhoneNumber",
+          "type": "cds.String",
+          "length": 3
+        },
+        "to_URLAddress_AddressID": {
+          "@cds.persistence.name": "TO_URLADDRESS_ADDRESSID",
+          "@odata.foreignKey4": "to_URLAddress",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_URLAddress_Person": {
+          "@cds.persistence.name": "TO_URLADDRESS_PERSON",
+          "@odata.foreignKey4": "to_URLAddress",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_URLAddress_OrdinalNumber": {
+          "@cds.persistence.name": "TO_URLADDRESS_ORDINALNUMBER",
+          "@odata.foreignKey4": "to_URLAddress",
+          "type": "cds.String",
+          "length": 3
+        },
+        "to_URLAddress_ValidityStartDate": {
+          "@cds.persistence.name": "TO_URLADDRESS_VALIDITYSTARTDATE",
+          "@odata.foreignKey4": "to_URLAddress",
+          "type": "cds.Date"
+        },
+        "to_URLAddress_IsDefaultURLAddress": {
+          "@cds.persistence.name": "TO_URLADDRESS_ISDEFAULTURLADDRESS",
+          "@odata.foreignKey4": "to_URLAddress",
+          "type": "cds.Boolean"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BusinessPartnerBankType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_BUSINESSPARTNERBANKTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "BusinessPartner": {
+          "@cds.persistence.name": "BUSINESSPARTNER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "BankIdentification": {
+          "@cds.persistence.name": "BANKIDENTIFICATION",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "BankCountryKey": {
+          "@cds.persistence.name": "BANKCOUNTRYKEY",
+          "type": "cds.String",
+          "length": 3
+        },
+        "BankName": {
+          "@cds.persistence.name": "BANKNAME",
+          "type": "cds.String",
+          "length": 60
+        },
+        "BankNumber": {
+          "@cds.persistence.name": "BANKNUMBER",
+          "type": "cds.String",
+          "length": 15
+        },
+        "SWIFTCode": {
+          "@cds.persistence.name": "SWIFTCODE",
+          "type": "cds.String",
+          "length": 11
+        },
+        "BankControlKey": {
+          "@cds.persistence.name": "BANKCONTROLKEY",
+          "type": "cds.String",
+          "length": 2
+        },
+        "BankAccountHolderName": {
+          "@cds.persistence.name": "BANKACCOUNTHOLDERNAME",
+          "type": "cds.String",
+          "length": 60
+        },
+        "BankAccountName": {
+          "@cds.persistence.name": "BANKACCOUNTNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "ValidityStartDate": {
+          "@cds.persistence.name": "VALIDITYSTARTDATE",
+          "type": "cds.Timestamp"
+        },
+        "ValidityEndDate": {
+          "@cds.persistence.name": "VALIDITYENDDATE",
+          "type": "cds.Timestamp"
+        },
+        "IBAN": {
+          "@cds.persistence.name": "IBAN",
+          "type": "cds.String",
+          "length": 34
+        },
+        "IBANValidityStartDate": {
+          "@cds.persistence.name": "IBANVALIDITYSTARTDATE",
+          "type": "cds.Date"
+        },
+        "BankAccount": {
+          "@cds.persistence.name": "BANKACCOUNT",
+          "type": "cds.String",
+          "length": 18
+        },
+        "BankAccountReferenceText": {
+          "@cds.persistence.name": "BANKACCOUNTREFERENCETEXT",
+          "type": "cds.String",
+          "length": 20
+        },
+        "CollectionAuthInd": {
+          "@cds.persistence.name": "COLLECTIONAUTHIND",
+          "type": "cds.Boolean"
+        },
+        "CityName": {
+          "@cds.persistence.name": "CITYNAME",
+          "type": "cds.String",
+          "length": 35
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BusinessPartnerContactType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_BUSINESSPARTNERCONTACTTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "RelationshipNumber": {
+          "@cds.persistence.name": "RELATIONSHIPNUMBER",
+          "key": true,
+          "type": "cds.String",
+          "length": 12
+        },
+        "BusinessPartnerCompany": {
+          "@cds.persistence.name": "BUSINESSPARTNERCOMPANY",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "BusinessPartnerPerson": {
+          "@cds.persistence.name": "BUSINESSPARTNERPERSON",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "ValidityEndDate": {
+          "@cds.persistence.name": "VALIDITYENDDATE",
+          "key": true,
+          "type": "cds.Date"
+        },
+        "ValidityStartDate": {
+          "@cds.persistence.name": "VALIDITYSTARTDATE",
+          "type": "cds.Date"
+        },
+        "IsStandardRelationship": {
+          "@cds.persistence.name": "ISSTANDARDRELATIONSHIP",
+          "type": "cds.Boolean"
+        },
+        "RelationshipCategory": {
+          "@cds.persistence.name": "RELATIONSHIPCATEGORY",
+          "type": "cds.String",
+          "length": 6
+        },
+        "to_ContactAddress": {
+          "@cds.persistence.name": "TO_CONTACTADDRESS",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_BPContactToAddressType",
+          "keys": [
+            {
+              "ref": [
+                "RelationshipNumber"
+              ],
+              "$generatedFieldName": "to_ContactAddress_RelationshipNumber"
+            },
+            {
+              "ref": [
+                "BusinessPartnerCompany"
+              ],
+              "$generatedFieldName": "to_ContactAddress_BusinessPartnerCompany"
+            },
+            {
+              "ref": [
+                "BusinessPartnerPerson"
+              ],
+              "$generatedFieldName": "to_ContactAddress_BusinessPartnerPerson"
+            },
+            {
+              "ref": [
+                "ValidityEndDate"
+              ],
+              "$generatedFieldName": "to_ContactAddress_ValidityEndDate"
+            },
+            {
+              "ref": [
+                "AddressID"
+              ],
+              "$generatedFieldName": "to_ContactAddress_AddressID"
+            }
+          ]
+        },
+        "to_ContactRelationship": {
+          "@cds.persistence.name": "TO_CONTACTRELATIONSHIP",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_BPContactToFuncAndDeptType",
+          "keys": [
+            {
+              "ref": [
+                "RelationshipNumber"
+              ],
+              "$generatedFieldName": "to_ContactRelationship_RelationshipNumber"
+            },
+            {
+              "ref": [
+                "BusinessPartnerCompany"
+              ],
+              "$generatedFieldName": "to_ContactRelationship_BusinessPartnerCompany"
+            },
+            {
+              "ref": [
+                "BusinessPartnerPerson"
+              ],
+              "$generatedFieldName": "to_ContactRelationship_BusinessPartnerPerson"
+            },
+            {
+              "ref": [
+                "ValidityEndDate"
+              ],
+              "$generatedFieldName": "to_ContactRelationship_ValidityEndDate"
+            }
+          ]
+        },
+        "to_ContactAddress_RelationshipNumber": {
+          "@cds.persistence.name": "TO_CONTACTADDRESS_RELATIONSHIPNUMBER",
+          "@odata.foreignKey4": "to_ContactAddress",
+          "type": "cds.String",
+          "length": 12
+        },
+        "to_ContactAddress_BusinessPartnerCompany": {
+          "@cds.persistence.name": "TO_CONTACTADDRESS_BUSINESSPARTNERCOMPANY",
+          "@odata.foreignKey4": "to_ContactAddress",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_ContactAddress_BusinessPartnerPerson": {
+          "@cds.persistence.name": "TO_CONTACTADDRESS_BUSINESSPARTNERPERSON",
+          "@odata.foreignKey4": "to_ContactAddress",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_ContactAddress_ValidityEndDate": {
+          "@cds.persistence.name": "TO_CONTACTADDRESS_VALIDITYENDDATE",
+          "@odata.foreignKey4": "to_ContactAddress",
+          "type": "cds.Date"
+        },
+        "to_ContactAddress_AddressID": {
+          "@cds.persistence.name": "TO_CONTACTADDRESS_ADDRESSID",
+          "@odata.foreignKey4": "to_ContactAddress",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_ContactRelationship_RelationshipNumber": {
+          "@cds.persistence.name": "TO_CONTACTRELATIONSHIP_RELATIONSHIPNUMBER",
+          "@odata.foreignKey4": "to_ContactRelationship",
+          "type": "cds.String",
+          "length": 12
+        },
+        "to_ContactRelationship_BusinessPartnerCompany": {
+          "@cds.persistence.name": "TO_CONTACTRELATIONSHIP_BUSINESSPARTNERCOMPANY",
+          "@odata.foreignKey4": "to_ContactRelationship",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_ContactRelationship_BusinessPartnerPerson": {
+          "@cds.persistence.name": "TO_CONTACTRELATIONSHIP_BUSINESSPARTNERPERSON",
+          "@odata.foreignKey4": "to_ContactRelationship",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_ContactRelationship_ValidityEndDate": {
+          "@cds.persistence.name": "TO_CONTACTRELATIONSHIP_VALIDITYENDDATE",
+          "@odata.foreignKey4": "to_ContactRelationship",
+          "type": "cds.Date"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BusinessPartnerRoleType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_BUSINESSPARTNERROLETYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "BusinessPartner": {
+          "@cds.persistence.name": "BUSINESSPARTNER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "BusinessPartnerRole": {
+          "@cds.persistence.name": "BUSINESSPARTNERROLE",
+          "key": true,
+          "type": "cds.String",
+          "length": 6
+        },
+        "ValidFrom": {
+          "@cds.persistence.name": "VALIDFROM",
+          "type": "cds.Timestamp"
+        },
+        "ValidTo": {
+          "@cds.persistence.name": "VALIDTO",
+          "type": "cds.Timestamp"
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BusinessPartnerTaxNumberType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_BUSINESSPARTNERTAXNUMBERTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "BusinessPartner": {
+          "@cds.persistence.name": "BUSINESSPARTNER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "BPTaxType": {
+          "@cds.persistence.name": "BPTAXTYPE",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "BPTaxNumber": {
+          "@cds.persistence.name": "BPTAXNUMBER",
+          "type": "cds.String",
+          "length": 20
+        },
+        "BPTaxLongNumber": {
+          "@cds.persistence.name": "BPTAXLONGNUMBER",
+          "type": "cds.String",
+          "length": 60
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BusinessPartnerType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_BUSINESSPARTNERTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "BusinessPartner": {
+          "@cds.persistence.name": "BUSINESSPARTNER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "Customer": {
+          "@cds.persistence.name": "CUSTOMER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "Supplier": {
+          "@cds.persistence.name": "SUPPLIER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "AcademicTitle": {
+          "@cds.persistence.name": "ACADEMICTITLE",
+          "type": "cds.String",
+          "length": 4
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "BusinessPartnerCategory": {
+          "@cds.persistence.name": "BUSINESSPARTNERCATEGORY",
+          "type": "cds.String",
+          "length": 1
+        },
+        "BusinessPartnerFullName": {
+          "@cds.persistence.name": "BUSINESSPARTNERFULLNAME",
+          "type": "cds.String",
+          "length": 81
+        },
+        "BusinessPartnerGrouping": {
+          "@cds.persistence.name": "BUSINESSPARTNERGROUPING",
+          "type": "cds.String",
+          "length": 4
+        },
+        "BusinessPartnerName": {
+          "@cds.persistence.name": "BUSINESSPARTNERNAME",
+          "type": "cds.String",
+          "length": 81
+        },
+        "BusinessPartnerUUID": {
+          "@cds.persistence.name": "BUSINESSPARTNERUUID",
+          "type": "cds.UUID"
+        },
+        "CorrespondenceLanguage": {
+          "@cds.persistence.name": "CORRESPONDENCELANGUAGE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "CreatedByUser": {
+          "@cds.persistence.name": "CREATEDBYUSER",
+          "type": "cds.String",
+          "length": 12
+        },
+        "CreationDate": {
+          "@cds.persistence.name": "CREATIONDATE",
+          "type": "cds.Date"
+        },
+        "CreationTime": {
+          "@cds.persistence.name": "CREATIONTIME",
+          "type": "cds.Time"
+        },
+        "FirstName": {
+          "@cds.persistence.name": "FIRSTNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "FormOfAddress": {
+          "@cds.persistence.name": "FORMOFADDRESS",
+          "type": "cds.String",
+          "length": 4
+        },
+        "Industry": {
+          "@cds.persistence.name": "INDUSTRY",
+          "type": "cds.String",
+          "length": 10
+        },
+        "InternationalLocationNumber1": {
+          "@cds.persistence.name": "INTERNATIONALLOCATIONNUMBER1",
+          "type": "cds.String",
+          "length": 7
+        },
+        "InternationalLocationNumber2": {
+          "@cds.persistence.name": "INTERNATIONALLOCATIONNUMBER2",
+          "type": "cds.String",
+          "length": 5
+        },
+        "IsFemale": {
+          "@cds.persistence.name": "ISFEMALE",
+          "type": "cds.Boolean"
+        },
+        "IsMale": {
+          "@cds.persistence.name": "ISMALE",
+          "type": "cds.Boolean"
+        },
+        "IsNaturalPerson": {
+          "@cds.persistence.name": "ISNATURALPERSON",
+          "type": "cds.String",
+          "length": 1
+        },
+        "IsSexUnknown": {
+          "@cds.persistence.name": "ISSEXUNKNOWN",
+          "type": "cds.Boolean"
+        },
+        "Language": {
+          "@cds.persistence.name": "LANGUAGE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "LastChangeDate": {
+          "@cds.persistence.name": "LASTCHANGEDATE",
+          "type": "cds.Date"
+        },
+        "LastChangeTime": {
+          "@cds.persistence.name": "LASTCHANGETIME",
+          "type": "cds.Time"
+        },
+        "LastChangedByUser": {
+          "@cds.persistence.name": "LASTCHANGEDBYUSER",
+          "type": "cds.String",
+          "length": 12
+        },
+        "LastName": {
+          "@cds.persistence.name": "LASTNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "LegalForm": {
+          "@cds.persistence.name": "LEGALFORM",
+          "type": "cds.String",
+          "length": 2
+        },
+        "OrganizationBPName1": {
+          "@cds.persistence.name": "ORGANIZATIONBPNAME1",
+          "type": "cds.String",
+          "length": 40
+        },
+        "OrganizationBPName2": {
+          "@cds.persistence.name": "ORGANIZATIONBPNAME2",
+          "type": "cds.String",
+          "length": 40
+        },
+        "OrganizationBPName3": {
+          "@cds.persistence.name": "ORGANIZATIONBPNAME3",
+          "type": "cds.String",
+          "length": 40
+        },
+        "OrganizationBPName4": {
+          "@cds.persistence.name": "ORGANIZATIONBPNAME4",
+          "type": "cds.String",
+          "length": 40
+        },
+        "OrganizationFoundationDate": {
+          "@cds.persistence.name": "ORGANIZATIONFOUNDATIONDATE",
+          "type": "cds.Date"
+        },
+        "OrganizationLiquidationDate": {
+          "@cds.persistence.name": "ORGANIZATIONLIQUIDATIONDATE",
+          "type": "cds.Date"
+        },
+        "SearchTerm1": {
+          "@cds.persistence.name": "SEARCHTERM1",
+          "type": "cds.String",
+          "length": 20
+        },
+        "AdditionalLastName": {
+          "@cds.persistence.name": "ADDITIONALLASTNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "BirthDate": {
+          "@cds.persistence.name": "BIRTHDATE",
+          "type": "cds.Date"
+        },
+        "BusinessPartnerIsBlocked": {
+          "@cds.persistence.name": "BUSINESSPARTNERISBLOCKED",
+          "type": "cds.Boolean"
+        },
+        "BusinessPartnerType": {
+          "@cds.persistence.name": "BUSINESSPARTNERTYPE",
+          "type": "cds.String",
+          "length": 4
+        },
+        "ETag": {
+          "@cds.persistence.name": "ETAG",
+          "type": "cds.String",
+          "length": 26
+        },
+        "GroupBusinessPartnerName1": {
+          "@cds.persistence.name": "GROUPBUSINESSPARTNERNAME1",
+          "type": "cds.String",
+          "length": 40
+        },
+        "GroupBusinessPartnerName2": {
+          "@cds.persistence.name": "GROUPBUSINESSPARTNERNAME2",
+          "type": "cds.String",
+          "length": 40
+        },
+        "IndependentAddressID": {
+          "@cds.persistence.name": "INDEPENDENTADDRESSID",
+          "type": "cds.String",
+          "length": 10
+        },
+        "InternationalLocationNumber3": {
+          "@cds.persistence.name": "INTERNATIONALLOCATIONNUMBER3",
+          "type": "cds.String",
+          "length": 1
+        },
+        "MiddleName": {
+          "@cds.persistence.name": "MIDDLENAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "NameCountry": {
+          "@cds.persistence.name": "NAMECOUNTRY",
+          "type": "cds.String",
+          "length": 3
+        },
+        "NameFormat": {
+          "@cds.persistence.name": "NAMEFORMAT",
+          "type": "cds.String",
+          "length": 2
+        },
+        "PersonFullName": {
+          "@cds.persistence.name": "PERSONFULLNAME",
+          "type": "cds.String",
+          "length": 80
+        },
+        "PersonNumber": {
+          "@cds.persistence.name": "PERSONNUMBER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "IsMarkedForArchiving": {
+          "@cds.persistence.name": "ISMARKEDFORARCHIVING",
+          "type": "cds.Boolean"
+        },
+        "BusinessPartnerIDByExtSystem": {
+          "@cds.persistence.name": "BUSINESSPARTNERIDBYEXTSYSTEM",
+          "type": "cds.String",
+          "length": 20
+        },
+        "TradingPartner": {
+          "@cds.persistence.name": "TRADINGPARTNER",
+          "type": "cds.String",
+          "length": 6
+        },
+        "to_BuPaIdentification": {
+          "@cds.persistence.name": "TO_BUPAIDENTIFICATION",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_BuPaIdentificationType",
+          "keys": [
+            {
+              "ref": [
+                "BusinessPartner"
+              ],
+              "$generatedFieldName": "to_BuPaIdentification_BusinessPartner"
+            },
+            {
+              "ref": [
+                "BPIdentificationType"
+              ],
+              "$generatedFieldName": "to_BuPaIdentification_BPIdentificationType"
+            },
+            {
+              "ref": [
+                "BPIdentificationNumber"
+              ],
+              "$generatedFieldName": "to_BuPaIdentification_BPIdentificationNumber"
+            }
+          ]
+        },
+        "to_BuPaIndustry": {
+          "@cds.persistence.name": "TO_BUPAINDUSTRY",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_BuPaIndustryType",
+          "keys": [
+            {
+              "ref": [
+                "IndustrySector"
+              ],
+              "$generatedFieldName": "to_BuPaIndustry_IndustrySector"
+            },
+            {
+              "ref": [
+                "IndustrySystemType"
+              ],
+              "$generatedFieldName": "to_BuPaIndustry_IndustrySystemType"
+            },
+            {
+              "ref": [
+                "BusinessPartner"
+              ],
+              "$generatedFieldName": "to_BuPaIndustry_BusinessPartner"
+            }
+          ]
+        },
+        "to_BusinessPartnerAddress": {
+          "@cds.persistence.name": "TO_BUSINESSPARTNERADDRESS",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_BusinessPartnerAddressType",
+          "keys": [
+            {
+              "ref": [
+                "BusinessPartner"
+              ],
+              "$generatedFieldName": "to_BusinessPartnerAddress_BusinessPartner"
+            },
+            {
+              "ref": [
+                "AddressID"
+              ],
+              "$generatedFieldName": "to_BusinessPartnerAddress_AddressID"
+            }
+          ]
+        },
+        "to_BusinessPartnerBank": {
+          "@cds.persistence.name": "TO_BUSINESSPARTNERBANK",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_BusinessPartnerBankType",
+          "keys": [
+            {
+              "ref": [
+                "BusinessPartner"
+              ],
+              "$generatedFieldName": "to_BusinessPartnerBank_BusinessPartner"
+            },
+            {
+              "ref": [
+                "BankIdentification"
+              ],
+              "$generatedFieldName": "to_BusinessPartnerBank_BankIdentification"
+            }
+          ]
+        },
+        "to_BusinessPartnerContact": {
+          "@cds.persistence.name": "TO_BUSINESSPARTNERCONTACT",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_BusinessPartnerContactType",
+          "keys": [
+            {
+              "ref": [
+                "RelationshipNumber"
+              ],
+              "$generatedFieldName": "to_BusinessPartnerContact_RelationshipNumber"
+            },
+            {
+              "ref": [
+                "BusinessPartnerCompany"
+              ],
+              "$generatedFieldName": "to_BusinessPartnerContact_BusinessPartnerCompany"
+            },
+            {
+              "ref": [
+                "BusinessPartnerPerson"
+              ],
+              "$generatedFieldName": "to_BusinessPartnerContact_BusinessPartnerPerson"
+            },
+            {
+              "ref": [
+                "ValidityEndDate"
+              ],
+              "$generatedFieldName": "to_BusinessPartnerContact_ValidityEndDate"
+            }
+          ]
+        },
+        "to_BusinessPartnerRole": {
+          "@cds.persistence.name": "TO_BUSINESSPARTNERROLE",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_BusinessPartnerRoleType",
+          "keys": [
+            {
+              "ref": [
+                "BusinessPartner"
+              ],
+              "$generatedFieldName": "to_BusinessPartnerRole_BusinessPartner"
+            },
+            {
+              "ref": [
+                "BusinessPartnerRole"
+              ],
+              "$generatedFieldName": "to_BusinessPartnerRole_BusinessPartnerRole"
+            }
+          ]
+        },
+        "to_BusinessPartnerTax": {
+          "@cds.persistence.name": "TO_BUSINESSPARTNERTAX",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_BusinessPartnerTaxNumberType",
+          "keys": [
+            {
+              "ref": [
+                "BusinessPartner"
+              ],
+              "$generatedFieldName": "to_BusinessPartnerTax_BusinessPartner"
+            },
+            {
+              "ref": [
+                "BPTaxType"
+              ],
+              "$generatedFieldName": "to_BusinessPartnerTax_BPTaxType"
+            }
+          ]
+        },
+        "to_Customer": {
+          "@cds.persistence.name": "TO_CUSTOMER",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_CustomerType",
+          "keys": [
+            {
+              "ref": [
+                "Customer"
+              ],
+              "$generatedFieldName": "to_Customer_Customer"
+            }
+          ]
+        },
+        "to_Supplier": {
+          "@cds.persistence.name": "TO_SUPPLIER",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_SupplierType",
+          "keys": [
+            {
+              "ref": [
+                "Supplier"
+              ],
+              "$generatedFieldName": "to_Supplier_Supplier"
+            }
+          ]
+        },
+        "to_BuPaIdentification_BusinessPartner": {
+          "@cds.persistence.name": "TO_BUPAIDENTIFICATION_BUSINESSPARTNER",
+          "@odata.foreignKey4": "to_BuPaIdentification",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_BuPaIdentification_BPIdentificationType": {
+          "@cds.persistence.name": "TO_BUPAIDENTIFICATION_BPIDENTIFICATIONTYPE",
+          "@odata.foreignKey4": "to_BuPaIdentification",
+          "type": "cds.String",
+          "length": 6
+        },
+        "to_BuPaIdentification_BPIdentificationNumber": {
+          "@cds.persistence.name": "TO_BUPAIDENTIFICATION_BPIDENTIFICATIONNUMBER",
+          "@odata.foreignKey4": "to_BuPaIdentification",
+          "type": "cds.String",
+          "length": 60
+        },
+        "to_BuPaIndustry_IndustrySector": {
+          "@cds.persistence.name": "TO_BUPAINDUSTRY_INDUSTRYSECTOR",
+          "@odata.foreignKey4": "to_BuPaIndustry",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_BuPaIndustry_IndustrySystemType": {
+          "@cds.persistence.name": "TO_BUPAINDUSTRY_INDUSTRYSYSTEMTYPE",
+          "@odata.foreignKey4": "to_BuPaIndustry",
+          "type": "cds.String",
+          "length": 4
+        },
+        "to_BuPaIndustry_BusinessPartner": {
+          "@cds.persistence.name": "TO_BUPAINDUSTRY_BUSINESSPARTNER",
+          "@odata.foreignKey4": "to_BuPaIndustry",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_BusinessPartnerAddress_BusinessPartner": {
+          "@cds.persistence.name": "TO_BUSINESSPARTNERADDRESS_BUSINESSPARTNER",
+          "@odata.foreignKey4": "to_BusinessPartnerAddress",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_BusinessPartnerAddress_AddressID": {
+          "@cds.persistence.name": "TO_BUSINESSPARTNERADDRESS_ADDRESSID",
+          "@odata.foreignKey4": "to_BusinessPartnerAddress",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_BusinessPartnerBank_BusinessPartner": {
+          "@cds.persistence.name": "TO_BUSINESSPARTNERBANK_BUSINESSPARTNER",
+          "@odata.foreignKey4": "to_BusinessPartnerBank",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_BusinessPartnerBank_BankIdentification": {
+          "@cds.persistence.name": "TO_BUSINESSPARTNERBANK_BANKIDENTIFICATION",
+          "@odata.foreignKey4": "to_BusinessPartnerBank",
+          "type": "cds.String",
+          "length": 4
+        },
+        "to_BusinessPartnerContact_RelationshipNumber": {
+          "@cds.persistence.name": "TO_BUSINESSPARTNERCONTACT_RELATIONSHIPNUMBER",
+          "@odata.foreignKey4": "to_BusinessPartnerContact",
+          "type": "cds.String",
+          "length": 12
+        },
+        "to_BusinessPartnerContact_BusinessPartnerCompany": {
+          "@cds.persistence.name": "TO_BUSINESSPARTNERCONTACT_BUSINESSPARTNERCOMPANY",
+          "@odata.foreignKey4": "to_BusinessPartnerContact",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_BusinessPartnerContact_BusinessPartnerPerson": {
+          "@cds.persistence.name": "TO_BUSINESSPARTNERCONTACT_BUSINESSPARTNERPERSON",
+          "@odata.foreignKey4": "to_BusinessPartnerContact",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_BusinessPartnerContact_ValidityEndDate": {
+          "@cds.persistence.name": "TO_BUSINESSPARTNERCONTACT_VALIDITYENDDATE",
+          "@odata.foreignKey4": "to_BusinessPartnerContact",
+          "type": "cds.Date"
+        },
+        "to_BusinessPartnerRole_BusinessPartner": {
+          "@cds.persistence.name": "TO_BUSINESSPARTNERROLE_BUSINESSPARTNER",
+          "@odata.foreignKey4": "to_BusinessPartnerRole",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_BusinessPartnerRole_BusinessPartnerRole": {
+          "@cds.persistence.name": "TO_BUSINESSPARTNERROLE_BUSINESSPARTNERROLE",
+          "@odata.foreignKey4": "to_BusinessPartnerRole",
+          "type": "cds.String",
+          "length": 6
+        },
+        "to_BusinessPartnerTax_BusinessPartner": {
+          "@cds.persistence.name": "TO_BUSINESSPARTNERTAX_BUSINESSPARTNER",
+          "@odata.foreignKey4": "to_BusinessPartnerTax",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_BusinessPartnerTax_BPTaxType": {
+          "@cds.persistence.name": "TO_BUSINESSPARTNERTAX_BPTAXTYPE",
+          "@odata.foreignKey4": "to_BusinessPartnerTax",
+          "type": "cds.String",
+          "length": 4
+        },
+        "to_Customer_Customer": {
+          "@cds.persistence.name": "TO_CUSTOMER_CUSTOMER",
+          "@odata.foreignKey4": "to_Customer",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_Supplier_Supplier": {
+          "@cds.persistence.name": "TO_SUPPLIER_SUPPLIER",
+          "@odata.foreignKey4": "to_Supplier",
+          "type": "cds.String",
+          "length": 10
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_CustSalesPartnerFuncType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_CUSTSALESPARTNERFUNCTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Customer": {
+          "@cds.persistence.name": "CUSTOMER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "SalesOrganization": {
+          "@cds.persistence.name": "SALESORGANIZATION",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "DistributionChannel": {
+          "@cds.persistence.name": "DISTRIBUTIONCHANNEL",
+          "key": true,
+          "type": "cds.String",
+          "length": 2
+        },
+        "Division": {
+          "@cds.persistence.name": "DIVISION",
+          "key": true,
+          "type": "cds.String",
+          "length": 2
+        },
+        "PartnerCounter": {
+          "@cds.persistence.name": "PARTNERCOUNTER",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "PartnerFunction": {
+          "@cds.persistence.name": "PARTNERFUNCTION",
+          "key": true,
+          "type": "cds.String",
+          "length": 2
+        },
+        "BPCustomerNumber": {
+          "@cds.persistence.name": "BPCUSTOMERNUMBER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "CustomerPartnerDescription": {
+          "@cds.persistence.name": "CUSTOMERPARTNERDESCRIPTION",
+          "type": "cds.String",
+          "length": 30
+        },
+        "DefaultPartner": {
+          "@cds.persistence.name": "DEFAULTPARTNER",
+          "type": "cds.Boolean"
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_CustomerCompanyType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_CUSTOMERCOMPANYTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Customer": {
+          "@cds.persistence.name": "CUSTOMER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "CompanyCode": {
+          "@cds.persistence.name": "COMPANYCODE",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "APARToleranceGroup": {
+          "@cds.persistence.name": "APARTOLERANCEGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "AccountByCustomer": {
+          "@cds.persistence.name": "ACCOUNTBYCUSTOMER",
+          "type": "cds.String",
+          "length": 12
+        },
+        "AccountingClerk": {
+          "@cds.persistence.name": "ACCOUNTINGCLERK",
+          "type": "cds.String",
+          "length": 2
+        },
+        "AccountingClerkFaxNumber": {
+          "@cds.persistence.name": "ACCOUNTINGCLERKFAXNUMBER",
+          "type": "cds.String",
+          "length": 31
+        },
+        "AccountingClerkInternetAddress": {
+          "@cds.persistence.name": "ACCOUNTINGCLERKINTERNETADDRESS",
+          "type": "cds.String",
+          "length": 130
+        },
+        "AccountingClerkPhoneNumber": {
+          "@cds.persistence.name": "ACCOUNTINGCLERKPHONENUMBER",
+          "type": "cds.String",
+          "length": 30
+        },
+        "AlternativePayerAccount": {
+          "@cds.persistence.name": "ALTERNATIVEPAYERACCOUNT",
+          "type": "cds.String",
+          "length": 10
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "CollectiveInvoiceVariant": {
+          "@cds.persistence.name": "COLLECTIVEINVOICEVARIANT",
+          "type": "cds.String",
+          "length": 1
+        },
+        "CustomerAccountNote": {
+          "@cds.persistence.name": "CUSTOMERACCOUNTNOTE",
+          "type": "cds.String",
+          "length": 30
+        },
+        "CustomerHeadOffice": {
+          "@cds.persistence.name": "CUSTOMERHEADOFFICE",
+          "type": "cds.String",
+          "length": 10
+        },
+        "CustomerSupplierClearingIsUsed": {
+          "@cds.persistence.name": "CUSTOMERSUPPLIERCLEARINGISUSED",
+          "type": "cds.Boolean"
+        },
+        "HouseBank": {
+          "@cds.persistence.name": "HOUSEBANK",
+          "type": "cds.String",
+          "length": 5
+        },
+        "InterestCalculationCode": {
+          "@cds.persistence.name": "INTERESTCALCULATIONCODE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "InterestCalculationDate": {
+          "@cds.persistence.name": "INTERESTCALCULATIONDATE",
+          "type": "cds.Date"
+        },
+        "IntrstCalcFrequencyInMonths": {
+          "@cds.persistence.name": "INTRSTCALCFREQUENCYINMONTHS",
+          "type": "cds.String",
+          "length": 2
+        },
+        "IsToBeLocallyProcessed": {
+          "@cds.persistence.name": "ISTOBELOCALLYPROCESSED",
+          "type": "cds.Boolean"
+        },
+        "ItemIsToBePaidSeparately": {
+          "@cds.persistence.name": "ITEMISTOBEPAIDSEPARATELY",
+          "type": "cds.Boolean"
+        },
+        "LayoutSortingRule": {
+          "@cds.persistence.name": "LAYOUTSORTINGRULE",
+          "type": "cds.String",
+          "length": 3
+        },
+        "PaymentBlockingReason": {
+          "@cds.persistence.name": "PAYMENTBLOCKINGREASON",
+          "type": "cds.String",
+          "length": 1
+        },
+        "PaymentMethodsList": {
+          "@cds.persistence.name": "PAYMENTMETHODSLIST",
+          "type": "cds.String",
+          "length": 10
+        },
+        "PaymentTerms": {
+          "@cds.persistence.name": "PAYMENTTERMS",
+          "type": "cds.String",
+          "length": 4
+        },
+        "PaytAdviceIsSentbyEDI": {
+          "@cds.persistence.name": "PAYTADVICEISSENTBYEDI",
+          "type": "cds.Boolean"
+        },
+        "PhysicalInventoryBlockInd": {
+          "@cds.persistence.name": "PHYSICALINVENTORYBLOCKIND",
+          "type": "cds.Boolean"
+        },
+        "ReconciliationAccount": {
+          "@cds.persistence.name": "RECONCILIATIONACCOUNT",
+          "type": "cds.String",
+          "length": 10
+        },
+        "RecordPaymentHistoryIndicator": {
+          "@cds.persistence.name": "RECORDPAYMENTHISTORYINDICATOR",
+          "type": "cds.Boolean"
+        },
+        "UserAtCustomer": {
+          "@cds.persistence.name": "USERATCUSTOMER",
+          "type": "cds.String",
+          "length": 15
+        },
+        "DeletionIndicator": {
+          "@cds.persistence.name": "DELETIONINDICATOR",
+          "type": "cds.Boolean"
+        },
+        "CustomerAccountGroup": {
+          "@cds.persistence.name": "CUSTOMERACCOUNTGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "to_CustomerDunning": {
+          "@cds.persistence.name": "TO_CUSTOMERDUNNING",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_CustomerDunningType",
+          "keys": [
+            {
+              "ref": [
+                "Customer"
+              ],
+              "$generatedFieldName": "to_CustomerDunning_Customer"
+            },
+            {
+              "ref": [
+                "CompanyCode"
+              ],
+              "$generatedFieldName": "to_CustomerDunning_CompanyCode"
+            },
+            {
+              "ref": [
+                "DunningArea"
+              ],
+              "$generatedFieldName": "to_CustomerDunning_DunningArea"
+            }
+          ]
+        },
+        "to_WithHoldingTax": {
+          "@cds.persistence.name": "TO_WITHHOLDINGTAX",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_CustomerWithHoldingTaxType",
+          "keys": [
+            {
+              "ref": [
+                "Customer"
+              ],
+              "$generatedFieldName": "to_WithHoldingTax_Customer"
+            },
+            {
+              "ref": [
+                "CompanyCode"
+              ],
+              "$generatedFieldName": "to_WithHoldingTax_CompanyCode"
+            },
+            {
+              "ref": [
+                "WithholdingTaxType"
+              ],
+              "$generatedFieldName": "to_WithHoldingTax_WithholdingTaxType"
+            }
+          ]
+        },
+        "to_CustomerDunning_Customer": {
+          "@cds.persistence.name": "TO_CUSTOMERDUNNING_CUSTOMER",
+          "@odata.foreignKey4": "to_CustomerDunning",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_CustomerDunning_CompanyCode": {
+          "@cds.persistence.name": "TO_CUSTOMERDUNNING_COMPANYCODE",
+          "@odata.foreignKey4": "to_CustomerDunning",
+          "type": "cds.String",
+          "length": 4
+        },
+        "to_CustomerDunning_DunningArea": {
+          "@cds.persistence.name": "TO_CUSTOMERDUNNING_DUNNINGAREA",
+          "@odata.foreignKey4": "to_CustomerDunning",
+          "type": "cds.String",
+          "length": 2
+        },
+        "to_WithHoldingTax_Customer": {
+          "@cds.persistence.name": "TO_WITHHOLDINGTAX_CUSTOMER",
+          "@odata.foreignKey4": "to_WithHoldingTax",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_WithHoldingTax_CompanyCode": {
+          "@cds.persistence.name": "TO_WITHHOLDINGTAX_COMPANYCODE",
+          "@odata.foreignKey4": "to_WithHoldingTax",
+          "type": "cds.String",
+          "length": 4
+        },
+        "to_WithHoldingTax_WithholdingTaxType": {
+          "@cds.persistence.name": "TO_WITHHOLDINGTAX_WITHHOLDINGTAXTYPE",
+          "@odata.foreignKey4": "to_WithHoldingTax",
+          "type": "cds.String",
+          "length": 2
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_CustomerDunningType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_CUSTOMERDUNNINGTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Customer": {
+          "@cds.persistence.name": "CUSTOMER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "CompanyCode": {
+          "@cds.persistence.name": "COMPANYCODE",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "DunningArea": {
+          "@cds.persistence.name": "DUNNINGAREA",
+          "key": true,
+          "type": "cds.String",
+          "length": 2
+        },
+        "DunningBlock": {
+          "@cds.persistence.name": "DUNNINGBLOCK",
+          "type": "cds.String",
+          "length": 1
+        },
+        "DunningLevel": {
+          "@cds.persistence.name": "DUNNINGLEVEL",
+          "type": "cds.String",
+          "length": 1
+        },
+        "DunningProcedure": {
+          "@cds.persistence.name": "DUNNINGPROCEDURE",
+          "type": "cds.String",
+          "length": 4
+        },
+        "DunningRecipient": {
+          "@cds.persistence.name": "DUNNINGRECIPIENT",
+          "type": "cds.String",
+          "length": 10
+        },
+        "LastDunnedOn": {
+          "@cds.persistence.name": "LASTDUNNEDON",
+          "type": "cds.Date"
+        },
+        "LegDunningProcedureOn": {
+          "@cds.persistence.name": "LEGDUNNINGPROCEDUREON",
+          "type": "cds.Date"
+        },
+        "DunningClerk": {
+          "@cds.persistence.name": "DUNNINGCLERK",
+          "type": "cds.String",
+          "length": 2
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "CustomerAccountGroup": {
+          "@cds.persistence.name": "CUSTOMERACCOUNTGROUP",
+          "type": "cds.String",
+          "length": 4
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_CustomerSalesAreaTaxType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_CUSTOMERSALESAREATAXTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Customer": {
+          "@cds.persistence.name": "CUSTOMER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "SalesOrganization": {
+          "@cds.persistence.name": "SALESORGANIZATION",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "DistributionChannel": {
+          "@cds.persistence.name": "DISTRIBUTIONCHANNEL",
+          "key": true,
+          "type": "cds.String",
+          "length": 2
+        },
+        "Division": {
+          "@cds.persistence.name": "DIVISION",
+          "key": true,
+          "type": "cds.String",
+          "length": 2
+        },
+        "DepartureCountry": {
+          "@cds.persistence.name": "DEPARTURECOUNTRY",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "CustomerTaxCategory": {
+          "@cds.persistence.name": "CUSTOMERTAXCATEGORY",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "CustomerTaxClassification": {
+          "@cds.persistence.name": "CUSTOMERTAXCLASSIFICATION",
+          "type": "cds.String",
+          "length": 1
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_CustomerSalesAreaType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_CUSTOMERSALESAREATYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Customer": {
+          "@cds.persistence.name": "CUSTOMER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "SalesOrganization": {
+          "@cds.persistence.name": "SALESORGANIZATION",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "DistributionChannel": {
+          "@cds.persistence.name": "DISTRIBUTIONCHANNEL",
+          "key": true,
+          "type": "cds.String",
+          "length": 2
+        },
+        "Division": {
+          "@cds.persistence.name": "DIVISION",
+          "key": true,
+          "type": "cds.String",
+          "length": 2
+        },
+        "AccountByCustomer": {
+          "@cds.persistence.name": "ACCOUNTBYCUSTOMER",
+          "type": "cds.String",
+          "length": 12
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "BillingIsBlockedForCustomer": {
+          "@cds.persistence.name": "BILLINGISBLOCKEDFORCUSTOMER",
+          "type": "cds.String",
+          "length": 2
+        },
+        "CompleteDeliveryIsDefined": {
+          "@cds.persistence.name": "COMPLETEDELIVERYISDEFINED",
+          "type": "cds.Boolean"
+        },
+        "Currency": {
+          "@cds.persistence.name": "CURRENCY",
+          "type": "cds.String",
+          "length": 5
+        },
+        "CustomerABCClassification": {
+          "@cds.persistence.name": "CUSTOMERABCCLASSIFICATION",
+          "type": "cds.String",
+          "length": 2
+        },
+        "CustomerAccountAssignmentGroup": {
+          "@cds.persistence.name": "CUSTOMERACCOUNTASSIGNMENTGROUP",
+          "type": "cds.String",
+          "length": 2
+        },
+        "CustomerGroup": {
+          "@cds.persistence.name": "CUSTOMERGROUP",
+          "type": "cds.String",
+          "length": 2
+        },
+        "CustomerPaymentTerms": {
+          "@cds.persistence.name": "CUSTOMERPAYMENTTERMS",
+          "type": "cds.String",
+          "length": 4
+        },
+        "CustomerPriceGroup": {
+          "@cds.persistence.name": "CUSTOMERPRICEGROUP",
+          "type": "cds.String",
+          "length": 2
+        },
+        "CustomerPricingProcedure": {
+          "@cds.persistence.name": "CUSTOMERPRICINGPROCEDURE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "DeliveryIsBlockedForCustomer": {
+          "@cds.persistence.name": "DELIVERYISBLOCKEDFORCUSTOMER",
+          "type": "cds.String",
+          "length": 2
+        },
+        "DeliveryPriority": {
+          "@cds.persistence.name": "DELIVERYPRIORITY",
+          "type": "cds.String",
+          "length": 2
+        },
+        "IncotermsClassification": {
+          "@cds.persistence.name": "INCOTERMSCLASSIFICATION",
+          "type": "cds.String",
+          "length": 3
+        },
+        "IncotermsLocation2": {
+          "@cds.persistence.name": "INCOTERMSLOCATION2",
+          "type": "cds.String",
+          "length": 70
+        },
+        "IncotermsVersion": {
+          "@cds.persistence.name": "INCOTERMSVERSION",
+          "type": "cds.String",
+          "length": 4
+        },
+        "IncotermsLocation1": {
+          "@cds.persistence.name": "INCOTERMSLOCATION1",
+          "type": "cds.String",
+          "length": 70
+        },
+        "DeletionIndicator": {
+          "@cds.persistence.name": "DELETIONINDICATOR",
+          "type": "cds.Boolean"
+        },
+        "IncotermsTransferLocation": {
+          "@cds.persistence.name": "INCOTERMSTRANSFERLOCATION",
+          "type": "cds.String",
+          "length": 28
+        },
+        "InvoiceDate": {
+          "@cds.persistence.name": "INVOICEDATE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "ItemOrderProbabilityInPercent": {
+          "@cds.persistence.name": "ITEMORDERPROBABILITYINPERCENT",
+          "type": "cds.String",
+          "length": 3
+        },
+        "OrderCombinationIsAllowed": {
+          "@cds.persistence.name": "ORDERCOMBINATIONISALLOWED",
+          "type": "cds.Boolean"
+        },
+        "OrderIsBlockedForCustomer": {
+          "@cds.persistence.name": "ORDERISBLOCKEDFORCUSTOMER",
+          "type": "cds.String",
+          "length": 2
+        },
+        "PartialDeliveryIsAllowed": {
+          "@cds.persistence.name": "PARTIALDELIVERYISALLOWED",
+          "type": "cds.String",
+          "length": 1
+        },
+        "PriceListType": {
+          "@cds.persistence.name": "PRICELISTTYPE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "SalesGroup": {
+          "@cds.persistence.name": "SALESGROUP",
+          "type": "cds.String",
+          "length": 3
+        },
+        "SalesOffice": {
+          "@cds.persistence.name": "SALESOFFICE",
+          "type": "cds.String",
+          "length": 4
+        },
+        "ShippingCondition": {
+          "@cds.persistence.name": "SHIPPINGCONDITION",
+          "type": "cds.String",
+          "length": 2
+        },
+        "SupplyingPlant": {
+          "@cds.persistence.name": "SUPPLYINGPLANT",
+          "type": "cds.String",
+          "length": 4
+        },
+        "SalesDistrict": {
+          "@cds.persistence.name": "SALESDISTRICT",
+          "type": "cds.String",
+          "length": 6
+        },
+        "CustomerAccountGroup": {
+          "@cds.persistence.name": "CUSTOMERACCOUNTGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "to_PartnerFunction": {
+          "@cds.persistence.name": "TO_PARTNERFUNCTION",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_CustSalesPartnerFuncType",
+          "keys": [
+            {
+              "ref": [
+                "Customer"
+              ],
+              "$generatedFieldName": "to_PartnerFunction_Customer"
+            },
+            {
+              "ref": [
+                "SalesOrganization"
+              ],
+              "$generatedFieldName": "to_PartnerFunction_SalesOrganization"
+            },
+            {
+              "ref": [
+                "DistributionChannel"
+              ],
+              "$generatedFieldName": "to_PartnerFunction_DistributionChannel"
+            },
+            {
+              "ref": [
+                "Division"
+              ],
+              "$generatedFieldName": "to_PartnerFunction_Division"
+            },
+            {
+              "ref": [
+                "PartnerCounter"
+              ],
+              "$generatedFieldName": "to_PartnerFunction_PartnerCounter"
+            },
+            {
+              "ref": [
+                "PartnerFunction"
+              ],
+              "$generatedFieldName": "to_PartnerFunction_PartnerFunction"
+            }
+          ]
+        },
+        "to_SalesAreaTax": {
+          "@cds.persistence.name": "TO_SALESAREATAX",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_CustomerSalesAreaTaxType",
+          "keys": [
+            {
+              "ref": [
+                "Customer"
+              ],
+              "$generatedFieldName": "to_SalesAreaTax_Customer"
+            },
+            {
+              "ref": [
+                "SalesOrganization"
+              ],
+              "$generatedFieldName": "to_SalesAreaTax_SalesOrganization"
+            },
+            {
+              "ref": [
+                "DistributionChannel"
+              ],
+              "$generatedFieldName": "to_SalesAreaTax_DistributionChannel"
+            },
+            {
+              "ref": [
+                "Division"
+              ],
+              "$generatedFieldName": "to_SalesAreaTax_Division"
+            },
+            {
+              "ref": [
+                "DepartureCountry"
+              ],
+              "$generatedFieldName": "to_SalesAreaTax_DepartureCountry"
+            },
+            {
+              "ref": [
+                "CustomerTaxCategory"
+              ],
+              "$generatedFieldName": "to_SalesAreaTax_CustomerTaxCategory"
+            }
+          ]
+        },
+        "to_PartnerFunction_Customer": {
+          "@cds.persistence.name": "TO_PARTNERFUNCTION_CUSTOMER",
+          "@odata.foreignKey4": "to_PartnerFunction",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_PartnerFunction_SalesOrganization": {
+          "@cds.persistence.name": "TO_PARTNERFUNCTION_SALESORGANIZATION",
+          "@odata.foreignKey4": "to_PartnerFunction",
+          "type": "cds.String",
+          "length": 4
+        },
+        "to_PartnerFunction_DistributionChannel": {
+          "@cds.persistence.name": "TO_PARTNERFUNCTION_DISTRIBUTIONCHANNEL",
+          "@odata.foreignKey4": "to_PartnerFunction",
+          "type": "cds.String",
+          "length": 2
+        },
+        "to_PartnerFunction_Division": {
+          "@cds.persistence.name": "TO_PARTNERFUNCTION_DIVISION",
+          "@odata.foreignKey4": "to_PartnerFunction",
+          "type": "cds.String",
+          "length": 2
+        },
+        "to_PartnerFunction_PartnerCounter": {
+          "@cds.persistence.name": "TO_PARTNERFUNCTION_PARTNERCOUNTER",
+          "@odata.foreignKey4": "to_PartnerFunction",
+          "type": "cds.String",
+          "length": 3
+        },
+        "to_PartnerFunction_PartnerFunction": {
+          "@cds.persistence.name": "TO_PARTNERFUNCTION_PARTNERFUNCTION",
+          "@odata.foreignKey4": "to_PartnerFunction",
+          "type": "cds.String",
+          "length": 2
+        },
+        "to_SalesAreaTax_Customer": {
+          "@cds.persistence.name": "TO_SALESAREATAX_CUSTOMER",
+          "@odata.foreignKey4": "to_SalesAreaTax",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_SalesAreaTax_SalesOrganization": {
+          "@cds.persistence.name": "TO_SALESAREATAX_SALESORGANIZATION",
+          "@odata.foreignKey4": "to_SalesAreaTax",
+          "type": "cds.String",
+          "length": 4
+        },
+        "to_SalesAreaTax_DistributionChannel": {
+          "@cds.persistence.name": "TO_SALESAREATAX_DISTRIBUTIONCHANNEL",
+          "@odata.foreignKey4": "to_SalesAreaTax",
+          "type": "cds.String",
+          "length": 2
+        },
+        "to_SalesAreaTax_Division": {
+          "@cds.persistence.name": "TO_SALESAREATAX_DIVISION",
+          "@odata.foreignKey4": "to_SalesAreaTax",
+          "type": "cds.String",
+          "length": 2
+        },
+        "to_SalesAreaTax_DepartureCountry": {
+          "@cds.persistence.name": "TO_SALESAREATAX_DEPARTURECOUNTRY",
+          "@odata.foreignKey4": "to_SalesAreaTax",
+          "type": "cds.String",
+          "length": 3
+        },
+        "to_SalesAreaTax_CustomerTaxCategory": {
+          "@cds.persistence.name": "TO_SALESAREATAX_CUSTOMERTAXCATEGORY",
+          "@odata.foreignKey4": "to_SalesAreaTax",
+          "type": "cds.String",
+          "length": 4
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_CustomerType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_CUSTOMERTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Customer": {
+          "@cds.persistence.name": "CUSTOMER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "BillingIsBlockedForCustomer": {
+          "@cds.persistence.name": "BILLINGISBLOCKEDFORCUSTOMER",
+          "type": "cds.String",
+          "length": 2
+        },
+        "CreatedByUser": {
+          "@cds.persistence.name": "CREATEDBYUSER",
+          "type": "cds.String",
+          "length": 12
+        },
+        "CreationDate": {
+          "@cds.persistence.name": "CREATIONDATE",
+          "type": "cds.Date"
+        },
+        "CustomerAccountGroup": {
+          "@cds.persistence.name": "CUSTOMERACCOUNTGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "CustomerClassification": {
+          "@cds.persistence.name": "CUSTOMERCLASSIFICATION",
+          "type": "cds.String",
+          "length": 2
+        },
+        "CustomerFullName": {
+          "@cds.persistence.name": "CUSTOMERFULLNAME",
+          "type": "cds.String",
+          "length": 220
+        },
+        "CustomerName": {
+          "@cds.persistence.name": "CUSTOMERNAME",
+          "type": "cds.String",
+          "length": 80
+        },
+        "DeliveryIsBlocked": {
+          "@cds.persistence.name": "DELIVERYISBLOCKED",
+          "type": "cds.String",
+          "length": 2
+        },
+        "NFPartnerIsNaturalPerson": {
+          "@cds.persistence.name": "NFPARTNERISNATURALPERSON",
+          "type": "cds.String",
+          "length": 1
+        },
+        "OrderIsBlockedForCustomer": {
+          "@cds.persistence.name": "ORDERISBLOCKEDFORCUSTOMER",
+          "type": "cds.String",
+          "length": 2
+        },
+        "PostingIsBlocked": {
+          "@cds.persistence.name": "POSTINGISBLOCKED",
+          "type": "cds.Boolean"
+        },
+        "Supplier": {
+          "@cds.persistence.name": "SUPPLIER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "CustomerCorporateGroup": {
+          "@cds.persistence.name": "CUSTOMERCORPORATEGROUP",
+          "type": "cds.String",
+          "length": 10
+        },
+        "FiscalAddress": {
+          "@cds.persistence.name": "FISCALADDRESS",
+          "type": "cds.String",
+          "length": 10
+        },
+        "Industry": {
+          "@cds.persistence.name": "INDUSTRY",
+          "type": "cds.String",
+          "length": 4
+        },
+        "IndustryCode1": {
+          "@cds.persistence.name": "INDUSTRYCODE1",
+          "type": "cds.String",
+          "length": 10
+        },
+        "IndustryCode2": {
+          "@cds.persistence.name": "INDUSTRYCODE2",
+          "type": "cds.String",
+          "length": 10
+        },
+        "IndustryCode3": {
+          "@cds.persistence.name": "INDUSTRYCODE3",
+          "type": "cds.String",
+          "length": 10
+        },
+        "IndustryCode4": {
+          "@cds.persistence.name": "INDUSTRYCODE4",
+          "type": "cds.String",
+          "length": 10
+        },
+        "IndustryCode5": {
+          "@cds.persistence.name": "INDUSTRYCODE5",
+          "type": "cds.String",
+          "length": 10
+        },
+        "InternationalLocationNumber1": {
+          "@cds.persistence.name": "INTERNATIONALLOCATIONNUMBER1",
+          "type": "cds.String",
+          "length": 7
+        },
+        "NielsenRegion": {
+          "@cds.persistence.name": "NIELSENREGION",
+          "type": "cds.String",
+          "length": 2
+        },
+        "ResponsibleType": {
+          "@cds.persistence.name": "RESPONSIBLETYPE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "TaxNumber1": {
+          "@cds.persistence.name": "TAXNUMBER1",
+          "type": "cds.String",
+          "length": 16
+        },
+        "TaxNumber2": {
+          "@cds.persistence.name": "TAXNUMBER2",
+          "type": "cds.String",
+          "length": 11
+        },
+        "TaxNumber3": {
+          "@cds.persistence.name": "TAXNUMBER3",
+          "type": "cds.String",
+          "length": 18
+        },
+        "TaxNumber4": {
+          "@cds.persistence.name": "TAXNUMBER4",
+          "type": "cds.String",
+          "length": 18
+        },
+        "TaxNumber5": {
+          "@cds.persistence.name": "TAXNUMBER5",
+          "type": "cds.String",
+          "length": 60
+        },
+        "TaxNumberType": {
+          "@cds.persistence.name": "TAXNUMBERTYPE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "VATRegistration": {
+          "@cds.persistence.name": "VATREGISTRATION",
+          "type": "cds.String",
+          "length": 20
+        },
+        "DeletionIndicator": {
+          "@cds.persistence.name": "DELETIONINDICATOR",
+          "type": "cds.Boolean"
+        },
+        "to_CustomerCompany": {
+          "@cds.persistence.name": "TO_CUSTOMERCOMPANY",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_CustomerCompanyType",
+          "keys": [
+            {
+              "ref": [
+                "Customer"
+              ],
+              "$generatedFieldName": "to_CustomerCompany_Customer"
+            },
+            {
+              "ref": [
+                "CompanyCode"
+              ],
+              "$generatedFieldName": "to_CustomerCompany_CompanyCode"
+            }
+          ]
+        },
+        "to_CustomerSalesArea": {
+          "@cds.persistence.name": "TO_CUSTOMERSALESAREA",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_CustomerSalesAreaType",
+          "keys": [
+            {
+              "ref": [
+                "Customer"
+              ],
+              "$generatedFieldName": "to_CustomerSalesArea_Customer"
+            },
+            {
+              "ref": [
+                "SalesOrganization"
+              ],
+              "$generatedFieldName": "to_CustomerSalesArea_SalesOrganization"
+            },
+            {
+              "ref": [
+                "DistributionChannel"
+              ],
+              "$generatedFieldName": "to_CustomerSalesArea_DistributionChannel"
+            },
+            {
+              "ref": [
+                "Division"
+              ],
+              "$generatedFieldName": "to_CustomerSalesArea_Division"
+            }
+          ]
+        },
+        "to_CustomerCompany_Customer": {
+          "@cds.persistence.name": "TO_CUSTOMERCOMPANY_CUSTOMER",
+          "@odata.foreignKey4": "to_CustomerCompany",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_CustomerCompany_CompanyCode": {
+          "@cds.persistence.name": "TO_CUSTOMERCOMPANY_COMPANYCODE",
+          "@odata.foreignKey4": "to_CustomerCompany",
+          "type": "cds.String",
+          "length": 4
+        },
+        "to_CustomerSalesArea_Customer": {
+          "@cds.persistence.name": "TO_CUSTOMERSALESAREA_CUSTOMER",
+          "@odata.foreignKey4": "to_CustomerSalesArea",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_CustomerSalesArea_SalesOrganization": {
+          "@cds.persistence.name": "TO_CUSTOMERSALESAREA_SALESORGANIZATION",
+          "@odata.foreignKey4": "to_CustomerSalesArea",
+          "type": "cds.String",
+          "length": 4
+        },
+        "to_CustomerSalesArea_DistributionChannel": {
+          "@cds.persistence.name": "TO_CUSTOMERSALESAREA_DISTRIBUTIONCHANNEL",
+          "@odata.foreignKey4": "to_CustomerSalesArea",
+          "type": "cds.String",
+          "length": 2
+        },
+        "to_CustomerSalesArea_Division": {
+          "@cds.persistence.name": "TO_CUSTOMERSALESAREA_DIVISION",
+          "@odata.foreignKey4": "to_CustomerSalesArea",
+          "type": "cds.String",
+          "length": 2
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_CustomerWithHoldingTaxType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_CUSTOMERWITHHOLDINGTAXTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Customer": {
+          "@cds.persistence.name": "CUSTOMER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "CompanyCode": {
+          "@cds.persistence.name": "COMPANYCODE",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "WithholdingTaxType": {
+          "@cds.persistence.name": "WITHHOLDINGTAXTYPE",
+          "key": true,
+          "type": "cds.String",
+          "length": 2
+        },
+        "WithholdingTaxCode": {
+          "@cds.persistence.name": "WITHHOLDINGTAXCODE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "WithholdingTaxAgent": {
+          "@cds.persistence.name": "WITHHOLDINGTAXAGENT",
+          "type": "cds.Boolean"
+        },
+        "ObligationDateBegin": {
+          "@cds.persistence.name": "OBLIGATIONDATEBEGIN",
+          "type": "cds.Date"
+        },
+        "ObligationDateEnd": {
+          "@cds.persistence.name": "OBLIGATIONDATEEND",
+          "type": "cds.Date"
+        },
+        "WithholdingTaxNumber": {
+          "@cds.persistence.name": "WITHHOLDINGTAXNUMBER",
+          "type": "cds.String",
+          "length": 16
+        },
+        "WithholdingTaxCertificate": {
+          "@cds.persistence.name": "WITHHOLDINGTAXCERTIFICATE",
+          "type": "cds.String",
+          "length": 25
+        },
+        "WithholdingTaxExmptPercent": {
+          "@cds.persistence.name": "WITHHOLDINGTAXEXMPTPERCENT",
+          "type": "cds.Decimal",
+          "precision": 5,
+          "scale": 2
+        },
+        "ExemptionDateBegin": {
+          "@cds.persistence.name": "EXEMPTIONDATEBEGIN",
+          "type": "cds.Date"
+        },
+        "ExemptionDateEnd": {
+          "@cds.persistence.name": "EXEMPTIONDATEEND",
+          "type": "cds.Date"
+        },
+        "ExemptionReason": {
+          "@cds.persistence.name": "EXEMPTIONREASON",
+          "type": "cds.String",
+          "length": 2
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_SupplierCompanyType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_SUPPLIERCOMPANYTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Supplier": {
+          "@cds.persistence.name": "SUPPLIER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "CompanyCode": {
+          "@cds.persistence.name": "COMPANYCODE",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "CompanyCodeName": {
+          "@cds.persistence.name": "COMPANYCODENAME",
+          "type": "cds.String",
+          "length": 25
+        },
+        "PaymentBlockingReason": {
+          "@cds.persistence.name": "PAYMENTBLOCKINGREASON",
+          "type": "cds.String",
+          "length": 1
+        },
+        "SupplierIsBlockedForPosting": {
+          "@cds.persistence.name": "SUPPLIERISBLOCKEDFORPOSTING",
+          "type": "cds.Boolean"
+        },
+        "AccountingClerk": {
+          "@cds.persistence.name": "ACCOUNTINGCLERK",
+          "type": "cds.String",
+          "length": 2
+        },
+        "AccountingClerkFaxNumber": {
+          "@cds.persistence.name": "ACCOUNTINGCLERKFAXNUMBER",
+          "type": "cds.String",
+          "length": 31
+        },
+        "AccountingClerkPhoneNumber": {
+          "@cds.persistence.name": "ACCOUNTINGCLERKPHONENUMBER",
+          "type": "cds.String",
+          "length": 30
+        },
+        "SupplierClerk": {
+          "@cds.persistence.name": "SUPPLIERCLERK",
+          "type": "cds.String",
+          "length": 15
+        },
+        "SupplierClerkURL": {
+          "@cds.persistence.name": "SUPPLIERCLERKURL",
+          "type": "cds.String",
+          "length": 130
+        },
+        "PaymentMethodsList": {
+          "@cds.persistence.name": "PAYMENTMETHODSLIST",
+          "type": "cds.String",
+          "length": 10
+        },
+        "PaymentTerms": {
+          "@cds.persistence.name": "PAYMENTTERMS",
+          "type": "cds.String",
+          "length": 4
+        },
+        "ClearCustomerSupplier": {
+          "@cds.persistence.name": "CLEARCUSTOMERSUPPLIER",
+          "type": "cds.Boolean"
+        },
+        "IsToBeLocallyProcessed": {
+          "@cds.persistence.name": "ISTOBELOCALLYPROCESSED",
+          "type": "cds.Boolean"
+        },
+        "ItemIsToBePaidSeparately": {
+          "@cds.persistence.name": "ITEMISTOBEPAIDSEPARATELY",
+          "type": "cds.Boolean"
+        },
+        "PaymentIsToBeSentByEDI": {
+          "@cds.persistence.name": "PAYMENTISTOBESENTBYEDI",
+          "type": "cds.Boolean"
+        },
+        "HouseBank": {
+          "@cds.persistence.name": "HOUSEBANK",
+          "type": "cds.String",
+          "length": 5
+        },
+        "CheckPaidDurationInDays": {
+          "@cds.persistence.name": "CHECKPAIDDURATIONINDAYS",
+          "type": "cds.Decimal",
+          "precision": 3,
+          "scale": 0
+        },
+        "BillOfExchLmtAmtInCoCodeCrcy": {
+          "@cds.persistence.name": "BILLOFEXCHLMTAMTINCOCODECRCY",
+          "type": "cds.Decimal",
+          "precision": 14,
+          "scale": 3
+        },
+        "SupplierClerkIDBySupplier": {
+          "@cds.persistence.name": "SUPPLIERCLERKIDBYSUPPLIER",
+          "type": "cds.String",
+          "length": 12
+        },
+        "ReconciliationAccount": {
+          "@cds.persistence.name": "RECONCILIATIONACCOUNT",
+          "type": "cds.String",
+          "length": 10
+        },
+        "InterestCalculationCode": {
+          "@cds.persistence.name": "INTERESTCALCULATIONCODE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "InterestCalculationDate": {
+          "@cds.persistence.name": "INTERESTCALCULATIONDATE",
+          "type": "cds.Date"
+        },
+        "IntrstCalcFrequencyInMonths": {
+          "@cds.persistence.name": "INTRSTCALCFREQUENCYINMONTHS",
+          "type": "cds.String",
+          "length": 2
+        },
+        "SupplierHeadOffice": {
+          "@cds.persistence.name": "SUPPLIERHEADOFFICE",
+          "type": "cds.String",
+          "length": 10
+        },
+        "AlternativePayee": {
+          "@cds.persistence.name": "ALTERNATIVEPAYEE",
+          "type": "cds.String",
+          "length": 10
+        },
+        "LayoutSortingRule": {
+          "@cds.persistence.name": "LAYOUTSORTINGRULE",
+          "type": "cds.String",
+          "length": 3
+        },
+        "APARToleranceGroup": {
+          "@cds.persistence.name": "APARTOLERANCEGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "SupplierCertificationDate": {
+          "@cds.persistence.name": "SUPPLIERCERTIFICATIONDATE",
+          "type": "cds.Date"
+        },
+        "SupplierAccountNote": {
+          "@cds.persistence.name": "SUPPLIERACCOUNTNOTE",
+          "type": "cds.String",
+          "length": 30
+        },
+        "WithholdingTaxCountry": {
+          "@cds.persistence.name": "WITHHOLDINGTAXCOUNTRY",
+          "type": "cds.String",
+          "length": 3
+        },
+        "DeletionIndicator": {
+          "@cds.persistence.name": "DELETIONINDICATOR",
+          "type": "cds.Boolean"
+        },
+        "CashPlanningGroup": {
+          "@cds.persistence.name": "CASHPLANNINGGROUP",
+          "type": "cds.String",
+          "length": 10
+        },
+        "IsToBeCheckedForDuplicates": {
+          "@cds.persistence.name": "ISTOBECHECKEDFORDUPLICATES",
+          "type": "cds.Boolean"
+        },
+        "SupplierAccountGroup": {
+          "@cds.persistence.name": "SUPPLIERACCOUNTGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "to_SupplierDunning": {
+          "@cds.persistence.name": "TO_SUPPLIERDUNNING",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_SupplierDunningType",
+          "keys": [
+            {
+              "ref": [
+                "Supplier"
+              ],
+              "$generatedFieldName": "to_SupplierDunning_Supplier"
+            },
+            {
+              "ref": [
+                "CompanyCode"
+              ],
+              "$generatedFieldName": "to_SupplierDunning_CompanyCode"
+            },
+            {
+              "ref": [
+                "DunningArea"
+              ],
+              "$generatedFieldName": "to_SupplierDunning_DunningArea"
+            }
+          ]
+        },
+        "to_SupplierWithHoldingTax": {
+          "@cds.persistence.name": "TO_SUPPLIERWITHHOLDINGTAX",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_SupplierWithHoldingTaxType",
+          "keys": [
+            {
+              "ref": [
+                "Supplier"
+              ],
+              "$generatedFieldName": "to_SupplierWithHoldingTax_Supplier"
+            },
+            {
+              "ref": [
+                "CompanyCode"
+              ],
+              "$generatedFieldName": "to_SupplierWithHoldingTax_CompanyCode"
+            },
+            {
+              "ref": [
+                "WithholdingTaxType"
+              ],
+              "$generatedFieldName": "to_SupplierWithHoldingTax_WithholdingTaxType"
+            }
+          ]
+        },
+        "to_SupplierDunning_Supplier": {
+          "@cds.persistence.name": "TO_SUPPLIERDUNNING_SUPPLIER",
+          "@odata.foreignKey4": "to_SupplierDunning",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_SupplierDunning_CompanyCode": {
+          "@cds.persistence.name": "TO_SUPPLIERDUNNING_COMPANYCODE",
+          "@odata.foreignKey4": "to_SupplierDunning",
+          "type": "cds.String",
+          "length": 4
+        },
+        "to_SupplierDunning_DunningArea": {
+          "@cds.persistence.name": "TO_SUPPLIERDUNNING_DUNNINGAREA",
+          "@odata.foreignKey4": "to_SupplierDunning",
+          "type": "cds.String",
+          "length": 2
+        },
+        "to_SupplierWithHoldingTax_Supplier": {
+          "@cds.persistence.name": "TO_SUPPLIERWITHHOLDINGTAX_SUPPLIER",
+          "@odata.foreignKey4": "to_SupplierWithHoldingTax",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_SupplierWithHoldingTax_CompanyCode": {
+          "@cds.persistence.name": "TO_SUPPLIERWITHHOLDINGTAX_COMPANYCODE",
+          "@odata.foreignKey4": "to_SupplierWithHoldingTax",
+          "type": "cds.String",
+          "length": 4
+        },
+        "to_SupplierWithHoldingTax_WithholdingTaxType": {
+          "@cds.persistence.name": "TO_SUPPLIERWITHHOLDINGTAX_WITHHOLDINGTAXTYPE",
+          "@odata.foreignKey4": "to_SupplierWithHoldingTax",
+          "type": "cds.String",
+          "length": 2
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_SupplierDunningType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_SUPPLIERDUNNINGTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Supplier": {
+          "@cds.persistence.name": "SUPPLIER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "CompanyCode": {
+          "@cds.persistence.name": "COMPANYCODE",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "DunningArea": {
+          "@cds.persistence.name": "DUNNINGAREA",
+          "key": true,
+          "type": "cds.String",
+          "length": 2
+        },
+        "DunningBlock": {
+          "@cds.persistence.name": "DUNNINGBLOCK",
+          "type": "cds.String",
+          "length": 1
+        },
+        "DunningLevel": {
+          "@cds.persistence.name": "DUNNINGLEVEL",
+          "type": "cds.String",
+          "length": 1
+        },
+        "DunningProcedure": {
+          "@cds.persistence.name": "DUNNINGPROCEDURE",
+          "type": "cds.String",
+          "length": 4
+        },
+        "DunningRecipient": {
+          "@cds.persistence.name": "DUNNINGRECIPIENT",
+          "type": "cds.String",
+          "length": 10
+        },
+        "LastDunnedOn": {
+          "@cds.persistence.name": "LASTDUNNEDON",
+          "type": "cds.Date"
+        },
+        "LegDunningProcedureOn": {
+          "@cds.persistence.name": "LEGDUNNINGPROCEDUREON",
+          "type": "cds.Date"
+        },
+        "DunningClerk": {
+          "@cds.persistence.name": "DUNNINGCLERK",
+          "type": "cds.String",
+          "length": 2
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "SupplierAccountGroup": {
+          "@cds.persistence.name": "SUPPLIERACCOUNTGROUP",
+          "type": "cds.String",
+          "length": 4
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_SupplierPartnerFuncType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_SUPPLIERPARTNERFUNCTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Supplier": {
+          "@cds.persistence.name": "SUPPLIER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "PurchasingOrganization": {
+          "@cds.persistence.name": "PURCHASINGORGANIZATION",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "SupplierSubrange": {
+          "@cds.persistence.name": "SUPPLIERSUBRANGE",
+          "key": true,
+          "type": "cds.String",
+          "length": 6
+        },
+        "Plant": {
+          "@cds.persistence.name": "PLANT",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "PartnerFunction": {
+          "@cds.persistence.name": "PARTNERFUNCTION",
+          "key": true,
+          "type": "cds.String",
+          "length": 2
+        },
+        "PartnerCounter": {
+          "@cds.persistence.name": "PARTNERCOUNTER",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "DefaultPartner": {
+          "@cds.persistence.name": "DEFAULTPARTNER",
+          "type": "cds.Boolean"
+        },
+        "CreationDate": {
+          "@cds.persistence.name": "CREATIONDATE",
+          "type": "cds.Date"
+        },
+        "CreatedByUser": {
+          "@cds.persistence.name": "CREATEDBYUSER",
+          "type": "cds.String",
+          "length": 12
+        },
+        "ReferenceSupplier": {
+          "@cds.persistence.name": "REFERENCESUPPLIER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_SupplierPurchasingOrgType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_SUPPLIERPURCHASINGORGTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Supplier": {
+          "@cds.persistence.name": "SUPPLIER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "PurchasingOrganization": {
+          "@cds.persistence.name": "PURCHASINGORGANIZATION",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "CalculationSchemaGroupCode": {
+          "@cds.persistence.name": "CALCULATIONSCHEMAGROUPCODE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "DeletionIndicator": {
+          "@cds.persistence.name": "DELETIONINDICATOR",
+          "type": "cds.Boolean"
+        },
+        "IncotermsClassification": {
+          "@cds.persistence.name": "INCOTERMSCLASSIFICATION",
+          "type": "cds.String",
+          "length": 3
+        },
+        "IncotermsTransferLocation": {
+          "@cds.persistence.name": "INCOTERMSTRANSFERLOCATION",
+          "type": "cds.String",
+          "length": 28
+        },
+        "IncotermsVersion": {
+          "@cds.persistence.name": "INCOTERMSVERSION",
+          "type": "cds.String",
+          "length": 4
+        },
+        "IncotermsLocation1": {
+          "@cds.persistence.name": "INCOTERMSLOCATION1",
+          "type": "cds.String",
+          "length": 70
+        },
+        "IncotermsLocation2": {
+          "@cds.persistence.name": "INCOTERMSLOCATION2",
+          "type": "cds.String",
+          "length": 70
+        },
+        "InvoiceIsGoodsReceiptBased": {
+          "@cds.persistence.name": "INVOICEISGOODSRECEIPTBASED",
+          "type": "cds.Boolean"
+        },
+        "MaterialPlannedDeliveryDurn": {
+          "@cds.persistence.name": "MATERIALPLANNEDDELIVERYDURN",
+          "type": "cds.Decimal",
+          "precision": 3,
+          "scale": 0
+        },
+        "MinimumOrderAmount": {
+          "@cds.persistence.name": "MINIMUMORDERAMOUNT",
+          "type": "cds.Decimal",
+          "precision": 14,
+          "scale": 3
+        },
+        "PaymentTerms": {
+          "@cds.persistence.name": "PAYMENTTERMS",
+          "type": "cds.String",
+          "length": 4
+        },
+        "PricingDateControl": {
+          "@cds.persistence.name": "PRICINGDATECONTROL",
+          "type": "cds.String",
+          "length": 1
+        },
+        "PurOrdAutoGenerationIsAllowed": {
+          "@cds.persistence.name": "PURORDAUTOGENERATIONISALLOWED",
+          "type": "cds.Boolean"
+        },
+        "PurchaseOrderCurrency": {
+          "@cds.persistence.name": "PURCHASEORDERCURRENCY",
+          "type": "cds.String",
+          "length": 5
+        },
+        "PurchasingGroup": {
+          "@cds.persistence.name": "PURCHASINGGROUP",
+          "type": "cds.String",
+          "length": 3
+        },
+        "PurchasingIsBlockedForSupplier": {
+          "@cds.persistence.name": "PURCHASINGISBLOCKEDFORSUPPLIER",
+          "type": "cds.Boolean"
+        },
+        "ShippingCondition": {
+          "@cds.persistence.name": "SHIPPINGCONDITION",
+          "type": "cds.String",
+          "length": 2
+        },
+        "SupplierABCClassificationCode": {
+          "@cds.persistence.name": "SUPPLIERABCCLASSIFICATIONCODE",
+          "type": "cds.String",
+          "length": 1
+        },
+        "SupplierPhoneNumber": {
+          "@cds.persistence.name": "SUPPLIERPHONENUMBER",
+          "type": "cds.String",
+          "length": 16
+        },
+        "SupplierRespSalesPersonName": {
+          "@cds.persistence.name": "SUPPLIERRESPSALESPERSONNAME",
+          "type": "cds.String",
+          "length": 30
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "SupplierAccountGroup": {
+          "@cds.persistence.name": "SUPPLIERACCOUNTGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "to_PartnerFunction": {
+          "@cds.persistence.name": "TO_PARTNERFUNCTION",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_SupplierPartnerFuncType",
+          "keys": [
+            {
+              "ref": [
+                "Supplier"
+              ],
+              "$generatedFieldName": "to_PartnerFunction_Supplier"
+            },
+            {
+              "ref": [
+                "PurchasingOrganization"
+              ],
+              "$generatedFieldName": "to_PartnerFunction_PurchasingOrganization"
+            },
+            {
+              "ref": [
+                "SupplierSubrange"
+              ],
+              "$generatedFieldName": "to_PartnerFunction_SupplierSubrange"
+            },
+            {
+              "ref": [
+                "Plant"
+              ],
+              "$generatedFieldName": "to_PartnerFunction_Plant"
+            },
+            {
+              "ref": [
+                "PartnerFunction"
+              ],
+              "$generatedFieldName": "to_PartnerFunction_PartnerFunction"
+            },
+            {
+              "ref": [
+                "PartnerCounter"
+              ],
+              "$generatedFieldName": "to_PartnerFunction_PartnerCounter"
+            }
+          ]
+        },
+        "to_PartnerFunction_Supplier": {
+          "@cds.persistence.name": "TO_PARTNERFUNCTION_SUPPLIER",
+          "@odata.foreignKey4": "to_PartnerFunction",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_PartnerFunction_PurchasingOrganization": {
+          "@cds.persistence.name": "TO_PARTNERFUNCTION_PURCHASINGORGANIZATION",
+          "@odata.foreignKey4": "to_PartnerFunction",
+          "type": "cds.String",
+          "length": 4
+        },
+        "to_PartnerFunction_SupplierSubrange": {
+          "@cds.persistence.name": "TO_PARTNERFUNCTION_SUPPLIERSUBRANGE",
+          "@odata.foreignKey4": "to_PartnerFunction",
+          "type": "cds.String",
+          "length": 6
+        },
+        "to_PartnerFunction_Plant": {
+          "@cds.persistence.name": "TO_PARTNERFUNCTION_PLANT",
+          "@odata.foreignKey4": "to_PartnerFunction",
+          "type": "cds.String",
+          "length": 4
+        },
+        "to_PartnerFunction_PartnerFunction": {
+          "@cds.persistence.name": "TO_PARTNERFUNCTION_PARTNERFUNCTION",
+          "@odata.foreignKey4": "to_PartnerFunction",
+          "type": "cds.String",
+          "length": 2
+        },
+        "to_PartnerFunction_PartnerCounter": {
+          "@cds.persistence.name": "TO_PARTNERFUNCTION_PARTNERCOUNTER",
+          "@odata.foreignKey4": "to_PartnerFunction",
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_SupplierType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_SUPPLIERTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Supplier": {
+          "@cds.persistence.name": "SUPPLIER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "AlternativePayeeAccountNumber": {
+          "@cds.persistence.name": "ALTERNATIVEPAYEEACCOUNTNUMBER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "CreatedByUser": {
+          "@cds.persistence.name": "CREATEDBYUSER",
+          "type": "cds.String",
+          "length": 12
+        },
+        "CreationDate": {
+          "@cds.persistence.name": "CREATIONDATE",
+          "type": "cds.Date"
+        },
+        "Customer": {
+          "@cds.persistence.name": "CUSTOMER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "PaymentIsBlockedForSupplier": {
+          "@cds.persistence.name": "PAYMENTISBLOCKEDFORSUPPLIER",
+          "type": "cds.Boolean"
+        },
+        "PostingIsBlocked": {
+          "@cds.persistence.name": "POSTINGISBLOCKED",
+          "type": "cds.Boolean"
+        },
+        "PurchasingIsBlocked": {
+          "@cds.persistence.name": "PURCHASINGISBLOCKED",
+          "type": "cds.Boolean"
+        },
+        "SupplierAccountGroup": {
+          "@cds.persistence.name": "SUPPLIERACCOUNTGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "SupplierFullName": {
+          "@cds.persistence.name": "SUPPLIERFULLNAME",
+          "type": "cds.String",
+          "length": 220
+        },
+        "SupplierName": {
+          "@cds.persistence.name": "SUPPLIERNAME",
+          "type": "cds.String",
+          "length": 80
+        },
+        "VATRegistration": {
+          "@cds.persistence.name": "VATREGISTRATION",
+          "type": "cds.String",
+          "length": 20
+        },
+        "BirthDate": {
+          "@cds.persistence.name": "BIRTHDATE",
+          "type": "cds.Date"
+        },
+        "ConcatenatedInternationalLocNo": {
+          "@cds.persistence.name": "CONCATENATEDINTERNATIONALLOCNO",
+          "type": "cds.String",
+          "length": 20
+        },
+        "DeletionIndicator": {
+          "@cds.persistence.name": "DELETIONINDICATOR",
+          "type": "cds.Boolean"
+        },
+        "FiscalAddress": {
+          "@cds.persistence.name": "FISCALADDRESS",
+          "type": "cds.String",
+          "length": 10
+        },
+        "Industry": {
+          "@cds.persistence.name": "INDUSTRY",
+          "type": "cds.String",
+          "length": 4
+        },
+        "InternationalLocationNumber1": {
+          "@cds.persistence.name": "INTERNATIONALLOCATIONNUMBER1",
+          "type": "cds.String",
+          "length": 7
+        },
+        "InternationalLocationNumber2": {
+          "@cds.persistence.name": "INTERNATIONALLOCATIONNUMBER2",
+          "type": "cds.String",
+          "length": 5
+        },
+        "InternationalLocationNumber3": {
+          "@cds.persistence.name": "INTERNATIONALLOCATIONNUMBER3",
+          "type": "cds.String",
+          "length": 1
+        },
+        "IsNaturalPerson": {
+          "@cds.persistence.name": "ISNATURALPERSON",
+          "type": "cds.String",
+          "length": 1
+        },
+        "ResponsibleType": {
+          "@cds.persistence.name": "RESPONSIBLETYPE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "SuplrQltyInProcmtCertfnValidTo": {
+          "@cds.persistence.name": "SUPLRQLTYINPROCMTCERTFNVALIDTO",
+          "type": "cds.Date"
+        },
+        "SuplrQualityManagementSystem": {
+          "@cds.persistence.name": "SUPLRQUALITYMANAGEMENTSYSTEM",
+          "type": "cds.String",
+          "length": 4
+        },
+        "SupplierCorporateGroup": {
+          "@cds.persistence.name": "SUPPLIERCORPORATEGROUP",
+          "type": "cds.String",
+          "length": 10
+        },
+        "SupplierProcurementBlock": {
+          "@cds.persistence.name": "SUPPLIERPROCUREMENTBLOCK",
+          "type": "cds.String",
+          "length": 2
+        },
+        "TaxNumber1": {
+          "@cds.persistence.name": "TAXNUMBER1",
+          "type": "cds.String",
+          "length": 16
+        },
+        "TaxNumber2": {
+          "@cds.persistence.name": "TAXNUMBER2",
+          "type": "cds.String",
+          "length": 11
+        },
+        "TaxNumber3": {
+          "@cds.persistence.name": "TAXNUMBER3",
+          "type": "cds.String",
+          "length": 18
+        },
+        "TaxNumber4": {
+          "@cds.persistence.name": "TAXNUMBER4",
+          "type": "cds.String",
+          "length": 18
+        },
+        "TaxNumber5": {
+          "@cds.persistence.name": "TAXNUMBER5",
+          "type": "cds.String",
+          "length": 60
+        },
+        "TaxNumberResponsible": {
+          "@cds.persistence.name": "TAXNUMBERRESPONSIBLE",
+          "type": "cds.String",
+          "length": 18
+        },
+        "TaxNumberType": {
+          "@cds.persistence.name": "TAXNUMBERTYPE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "to_SupplierCompany": {
+          "@cds.persistence.name": "TO_SUPPLIERCOMPANY",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_SupplierCompanyType",
+          "keys": [
+            {
+              "ref": [
+                "Supplier"
+              ],
+              "$generatedFieldName": "to_SupplierCompany_Supplier"
+            },
+            {
+              "ref": [
+                "CompanyCode"
+              ],
+              "$generatedFieldName": "to_SupplierCompany_CompanyCode"
+            }
+          ]
+        },
+        "to_SupplierPurchasingOrg": {
+          "@cds.persistence.name": "TO_SUPPLIERPURCHASINGORG",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "API_BUSINESS_PARTNER.A_SupplierPurchasingOrgType",
+          "keys": [
+            {
+              "ref": [
+                "Supplier"
+              ],
+              "$generatedFieldName": "to_SupplierPurchasingOrg_Supplier"
+            },
+            {
+              "ref": [
+                "PurchasingOrganization"
+              ],
+              "$generatedFieldName": "to_SupplierPurchasingOrg_PurchasingOrganization"
+            }
+          ]
+        },
+        "to_SupplierCompany_Supplier": {
+          "@cds.persistence.name": "TO_SUPPLIERCOMPANY_SUPPLIER",
+          "@odata.foreignKey4": "to_SupplierCompany",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_SupplierCompany_CompanyCode": {
+          "@cds.persistence.name": "TO_SUPPLIERCOMPANY_COMPANYCODE",
+          "@odata.foreignKey4": "to_SupplierCompany",
+          "type": "cds.String",
+          "length": 4
+        },
+        "to_SupplierPurchasingOrg_Supplier": {
+          "@cds.persistence.name": "TO_SUPPLIERPURCHASINGORG_SUPPLIER",
+          "@odata.foreignKey4": "to_SupplierPurchasingOrg",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_SupplierPurchasingOrg_PurchasingOrganization": {
+          "@cds.persistence.name": "TO_SUPPLIERPURCHASINGORG_PURCHASINGORGANIZATION",
+          "@odata.foreignKey4": "to_SupplierPurchasingOrg",
+          "type": "cds.String",
+          "length": 4
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_SupplierWithHoldingTaxType": {
+      "kind": "entity",
+      "@cds.persistence.name": "API_BUSINESS_PARTNER_A_SUPPLIERWITHHOLDINGTAXTYPE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Supplier": {
+          "@cds.persistence.name": "SUPPLIER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "CompanyCode": {
+          "@cds.persistence.name": "COMPANYCODE",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "WithholdingTaxType": {
+          "@cds.persistence.name": "WITHHOLDINGTAXTYPE",
+          "key": true,
+          "type": "cds.String",
+          "length": 2
+        },
+        "ExemptionDateBegin": {
+          "@cds.persistence.name": "EXEMPTIONDATEBEGIN",
+          "type": "cds.Date"
+        },
+        "ExemptionDateEnd": {
+          "@cds.persistence.name": "EXEMPTIONDATEEND",
+          "type": "cds.Date"
+        },
+        "ExemptionReason": {
+          "@cds.persistence.name": "EXEMPTIONREASON",
+          "type": "cds.String",
+          "length": 2
+        },
+        "IsWithholdingTaxSubject": {
+          "@cds.persistence.name": "ISWITHHOLDINGTAXSUBJECT",
+          "type": "cds.Boolean"
+        },
+        "RecipientType": {
+          "@cds.persistence.name": "RECIPIENTTYPE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "WithholdingTaxCertificate": {
+          "@cds.persistence.name": "WITHHOLDINGTAXCERTIFICATE",
+          "type": "cds.String",
+          "length": 25
+        },
+        "WithholdingTaxCode": {
+          "@cds.persistence.name": "WITHHOLDINGTAXCODE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "WithholdingTaxExmptPercent": {
+          "@cds.persistence.name": "WITHHOLDINGTAXEXMPTPERCENT",
+          "type": "cds.Decimal",
+          "precision": 5,
+          "scale": 2
+        },
+        "WithholdingTaxNumber": {
+          "@cds.persistence.name": "WITHHOLDINGTAXNUMBER",
+          "type": "cds.String",
+          "length": 16
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        }
+      }
+    },
+    "S4BookshopService": {
+      "kind": "service",
+      "@source": "srv/cat-service.cds"
+    },
+    "S4BookshopService.Authors": {
+      "kind": "entity",
+      "@Capabilities.DeleteRestrictions.Deletable": false,
+      "@Capabilities.InsertRestrictions.Insertable": false,
+      "@Capabilities.UpdateRestrictions.Updatable": false,
+      "@cds.persistence.name": "S4BOOKSHOPSERVICE_AUTHORS",
+      "@readonly": true,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "my.s4bookshop.Authors"
+            ]
+          }
+        }
+      },
+      "elements": {
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "name": {
+          "@cds.persistence.name": "NAME",
+          "type": "cds.String"
+        },
+        "books": {
+          "@cds.persistence.name": "BOOKS",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "S4BookshopService.Books",
+          "on": [
+            {
+              "ref": [
+                "books",
+                "author"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        }
+      },
+      "$syntax": "projection"
+    },
+    "S4BookshopService.Books": {
+      "kind": "entity",
+      "@cds.persistence.name": "S4BOOKSHOPSERVICE_BOOKS",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "my.s4bookshop.Books"
+            ]
+          }
+        }
+      },
+      "elements": {
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "title": {
+          "@cds.persistence.name": "TITLE",
+          "type": "cds.String"
+        },
+        "author": {
+          "@cds.persistence.name": "AUTHOR",
+          "type": "cds.Association",
+          "target": "S4BookshopService.Authors",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ],
+              "$generatedFieldName": "author_ID"
+            }
+          ]
+        },
+        "stock": {
+          "@cds.persistence.name": "STOCK",
+          "type": "cds.Integer"
+        },
+        "author_ID": {
+          "@cds.persistence.name": "AUTHOR_ID",
+          "@odata.foreignKey4": "author",
+          "type": "cds.Integer"
+        }
+      },
+      "$syntax": "projection"
+    },
+    "S4BookshopService.GetSupplier": {
+      "kind": "function",
+      "params": {
+        "OrderID": {
+          "@cds.persistence.name": "ORDERID",
+          "type": "cds.UUID"
+        }
+      },
+      "returns": {
+        "type": "S4BookshopService.Suppliers"
+      }
+    },
+    "S4BookshopService.Orders": {
+      "kind": "entity",
+      "@Capabilities.DeleteRestrictions.Deletable": false,
+      "@Capabilities.ReadRestrictions.Readable": false,
+      "@Capabilities.UpdateRestrictions.Updatable": false,
+      "@cds.persistence.name": "S4BOOKSHOPSERVICE_ORDERS",
+      "@insertonly": true,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "my.s4bookshop.Orders"
+            ]
+          }
+        }
+      },
+      "elements": {
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "book": {
+          "@cds.persistence.name": "BOOK",
+          "type": "cds.Association",
+          "target": "S4BookshopService.Books",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ],
+              "$generatedFieldName": "book_ID"
+            }
+          ]
+        },
+        "buyer": {
+          "@cds.persistence.name": "BUYER",
+          "type": "cds.String"
+        },
+        "date": {
+          "@cds.persistence.name": "DATE",
+          "type": "cds.DateTime"
+        },
+        "amount": {
+          "@cds.persistence.name": "AMOUNT",
+          "type": "cds.Integer"
+        },
+        "supplier": {
+          "@cds.persistence.name": "SUPPLIER",
+          "type": "cds.Integer"
+        },
+        "book_ID": {
+          "@cds.persistence.name": "BOOK_ID",
+          "@odata.foreignKey4": "book",
+          "type": "cds.Integer"
+        }
+      },
+      "$syntax": "projection"
+    },
+    "S4BookshopService.Suppliers": {
+      "kind": "entity",
+      "@cds.persistence.name": "S4BOOKSHOPSERVICE_SUPPLIERS",
+      "@cds.persistence.skip": true,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "API_BUSINESS_PARTNER.A_SupplierType"
+            ]
+          },
+          "excluding": [
+            "to_SupplierCompany",
+            "to_SupplierPurchasingOrg"
+          ]
+        }
+      },
+      "elements": {
+        "Supplier": {
+          "@cds.persistence.name": "SUPPLIER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "AlternativePayeeAccountNumber": {
+          "@cds.persistence.name": "ALTERNATIVEPAYEEACCOUNTNUMBER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "AuthorizationGroup": {
+          "@cds.persistence.name": "AUTHORIZATIONGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "CreatedByUser": {
+          "@cds.persistence.name": "CREATEDBYUSER",
+          "type": "cds.String",
+          "length": 12
+        },
+        "CreationDate": {
+          "@cds.persistence.name": "CREATIONDATE",
+          "type": "cds.Date"
+        },
+        "Customer": {
+          "@cds.persistence.name": "CUSTOMER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "PaymentIsBlockedForSupplier": {
+          "@cds.persistence.name": "PAYMENTISBLOCKEDFORSUPPLIER",
+          "type": "cds.Boolean"
+        },
+        "PostingIsBlocked": {
+          "@cds.persistence.name": "POSTINGISBLOCKED",
+          "type": "cds.Boolean"
+        },
+        "PurchasingIsBlocked": {
+          "@cds.persistence.name": "PURCHASINGISBLOCKED",
+          "type": "cds.Boolean"
+        },
+        "SupplierAccountGroup": {
+          "@cds.persistence.name": "SUPPLIERACCOUNTGROUP",
+          "type": "cds.String",
+          "length": 4
+        },
+        "SupplierFullName": {
+          "@cds.persistence.name": "SUPPLIERFULLNAME",
+          "type": "cds.String",
+          "length": 220
+        },
+        "SupplierName": {
+          "@cds.persistence.name": "SUPPLIERNAME",
+          "type": "cds.String",
+          "length": 80
+        },
+        "VATRegistration": {
+          "@cds.persistence.name": "VATREGISTRATION",
+          "type": "cds.String",
+          "length": 20
+        },
+        "BirthDate": {
+          "@cds.persistence.name": "BIRTHDATE",
+          "type": "cds.Date"
+        },
+        "ConcatenatedInternationalLocNo": {
+          "@cds.persistence.name": "CONCATENATEDINTERNATIONALLOCNO",
+          "type": "cds.String",
+          "length": 20
+        },
+        "DeletionIndicator": {
+          "@cds.persistence.name": "DELETIONINDICATOR",
+          "type": "cds.Boolean"
+        },
+        "FiscalAddress": {
+          "@cds.persistence.name": "FISCALADDRESS",
+          "type": "cds.String",
+          "length": 10
+        },
+        "Industry": {
+          "@cds.persistence.name": "INDUSTRY",
+          "type": "cds.String",
+          "length": 4
+        },
+        "InternationalLocationNumber1": {
+          "@cds.persistence.name": "INTERNATIONALLOCATIONNUMBER1",
+          "type": "cds.String",
+          "length": 7
+        },
+        "InternationalLocationNumber2": {
+          "@cds.persistence.name": "INTERNATIONALLOCATIONNUMBER2",
+          "type": "cds.String",
+          "length": 5
+        },
+        "InternationalLocationNumber3": {
+          "@cds.persistence.name": "INTERNATIONALLOCATIONNUMBER3",
+          "type": "cds.String",
+          "length": 1
+        },
+        "IsNaturalPerson": {
+          "@cds.persistence.name": "ISNATURALPERSON",
+          "type": "cds.String",
+          "length": 1
+        },
+        "ResponsibleType": {
+          "@cds.persistence.name": "RESPONSIBLETYPE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "SuplrQltyInProcmtCertfnValidTo": {
+          "@cds.persistence.name": "SUPLRQLTYINPROCMTCERTFNVALIDTO",
+          "type": "cds.Date"
+        },
+        "SuplrQualityManagementSystem": {
+          "@cds.persistence.name": "SUPLRQUALITYMANAGEMENTSYSTEM",
+          "type": "cds.String",
+          "length": 4
+        },
+        "SupplierCorporateGroup": {
+          "@cds.persistence.name": "SUPPLIERCORPORATEGROUP",
+          "type": "cds.String",
+          "length": 10
+        },
+        "SupplierProcurementBlock": {
+          "@cds.persistence.name": "SUPPLIERPROCUREMENTBLOCK",
+          "type": "cds.String",
+          "length": 2
+        },
+        "TaxNumber1": {
+          "@cds.persistence.name": "TAXNUMBER1",
+          "type": "cds.String",
+          "length": 16
+        },
+        "TaxNumber2": {
+          "@cds.persistence.name": "TAXNUMBER2",
+          "type": "cds.String",
+          "length": 11
+        },
+        "TaxNumber3": {
+          "@cds.persistence.name": "TAXNUMBER3",
+          "type": "cds.String",
+          "length": 18
+        },
+        "TaxNumber4": {
+          "@cds.persistence.name": "TAXNUMBER4",
+          "type": "cds.String",
+          "length": 18
+        },
+        "TaxNumber5": {
+          "@cds.persistence.name": "TAXNUMBER5",
+          "type": "cds.String",
+          "length": 60
+        },
+        "TaxNumberResponsible": {
+          "@cds.persistence.name": "TAXNUMBERRESPONSIBLE",
+          "type": "cds.String",
+          "length": 18
+        },
+        "TaxNumberType": {
+          "@cds.persistence.name": "TAXNUMBERTYPE",
+          "type": "cds.String",
+          "length": 2
+        }
+      },
+      "$syntax": "projection"
+    },
+    "my.s4bookshop.Authors": {
+      "kind": "entity",
+      "@cds.persistence.name": "MY_S4BOOKSHOP_AUTHORS",
+      "elements": {
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "name": {
+          "@cds.persistence.name": "NAME",
+          "type": "cds.String"
+        },
+        "books": {
+          "@cds.persistence.name": "BOOKS",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "my.s4bookshop.Books",
+          "on": [
+            {
+              "ref": [
+                "books",
+                "author"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "my.s4bookshop.Books": {
+      "kind": "entity",
+      "@cds.persistence.name": "MY_S4BOOKSHOP_BOOKS",
+      "elements": {
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "title": {
+          "@cds.persistence.name": "TITLE",
+          "type": "cds.String"
+        },
+        "author": {
+          "@cds.persistence.name": "AUTHOR",
+          "type": "cds.Association",
+          "target": "my.s4bookshop.Authors",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ],
+              "$generatedFieldName": "author_ID"
+            }
+          ]
+        },
+        "stock": {
+          "@cds.persistence.name": "STOCK",
+          "type": "cds.Integer"
+        },
+        "author_ID": {
+          "@cds.persistence.name": "AUTHOR_ID",
+          "@odata.foreignKey4": "author",
+          "type": "cds.Integer"
+        }
+      }
+    },
+    "my.s4bookshop.Orders": {
+      "kind": "entity",
+      "@cds.persistence.name": "MY_S4BOOKSHOP_ORDERS",
+      "elements": {
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "book": {
+          "@cds.persistence.name": "BOOK",
+          "type": "cds.Association",
+          "target": "my.s4bookshop.Books",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ],
+              "$generatedFieldName": "book_ID"
+            }
+          ]
+        },
+        "buyer": {
+          "@cds.persistence.name": "BUYER",
+          "type": "cds.String"
+        },
+        "date": {
+          "@cds.persistence.name": "DATE",
+          "type": "cds.DateTime"
+        },
+        "amount": {
+          "@cds.persistence.name": "AMOUNT",
+          "type": "cds.Integer"
+        },
+        "supplier": {
+          "@cds.persistence.name": "SUPPLIER",
+          "type": "cds.Integer"
+        },
+        "book_ID": {
+          "@cds.persistence.name": "BOOK_ID",
+          "@odata.foreignKey4": "book",
+          "type": "cds.Integer"
+        }
+      }
+    }
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.21.1"
+  },
+  "$version": "1.0",
+  "@sql_mapping": "plain"
+}

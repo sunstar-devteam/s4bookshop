@@ -1,0 +1,67 @@
+ID: s4bookshop2
+_schema-version: "2.1"
+version: 0.0.1
+modules:
+  - name: s4bookshop2-db
+    type: hdb
+    path: db
+    parameters:
+      memory: 256M
+      disk-quota: 256M
+    requires:
+      - name: s4bookshop2-db-hdi-container
+  - name: s4bookshop2-srv
+    type: java
+    path: srv
+    parameters:
+      memory: 1024M
+    provides:
+      - name: srv_api
+        properties:
+          url: ${default-url}
+    requires:
+      - name: s4bookshop2-db-hdi-container
+        properties:
+          ALLOW_MOCKED_AUTH_HEADER : true
+          JBP_CONFIG_RESOURCE_CONFIGURATION: '[tomcat/webapps/ROOT/META-INF/context.xml:
+            {"service_name_for_DefaultDB" : "~{hdi-container-name}"}]'
+      - name: s4bookshop2-dest
+      - name: s4bookshop2-uaa
+
+  - name: UI-suppliers
+    type: html5
+    path: UI-suppliers
+    parameters:
+       disk-quota: 256M
+       memory: 256M
+    build-parameters:
+       builder: grunt
+    requires:
+     - name: srv_api
+       group: destinations
+       properties:
+          forwardAuthToken: true
+          strictSSL: false
+          name: srv_api
+          url: ~{url}
+     - name: s4bookshop2-uaa
+
+resources:
+  - name: s4bookshop2-db-hdi-container
+    type: com.sap.xs.hdi-container
+    properties:
+      hdi-container-name: ${service-name}
+  - name: s4bookshop2-dest
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-plan: lite
+  - name: s4bookshop2-uaa
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      parameters:
+        config:
+            xsappname: 's4bookshop2'
+            tenant-mode: dedicated
